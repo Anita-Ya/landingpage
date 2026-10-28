@@ -9,7 +9,7 @@
         content="गांठ का बढ़ता आकार और बदलती बनावट चिंता बढ़ा रही है? कभी सख़्तपन, कभी दर्द या सूजन—जानिए 100% प्राकृतिक आयुर्वेदिक समाधान।">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/74f0321a-2b49-40f5-8655-4b306a73337c.png">
+    <link rel="icon" type="image/png" href="images/9ad48cb2-c38f-4698-a377-2929ebec461b.png">
 
     <!-- Google Fonts & Tabler Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 
     <!-- Custom Modern Design Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=2026.4">
+    <link rel="stylesheet" href="styles.css?v=2026.13">
 
     <style>
         /* ==========================================================================
@@ -91,7 +91,9 @@
             max-width: 450px;
             min-height: 100vh;
             background: #FFFFFF;
-            box-shadow: 0 16px 50px rgba(42, 8, 69, 0.12), 0 0 0 1px rgba(234, 179, 8, 0.2);
+            border-left: 1.5px solid rgba(126, 34, 206, 0.35);
+            border-right: 1.5px solid rgba(126, 34, 206, 0.35);
+            box-shadow: 0 16px 50px rgba(42, 8, 69, 0.12), 0 0 0 1.5px rgba(126, 34, 206, 0.4);
             position: relative;
             z-index: 1;
             overflow: hidden;
@@ -101,13 +103,17 @@
 
         @media (min-width: 768px) {
             .ayur-stage-wrap {
-                padding: 24px 0 45px;
+                padding: 0 !important;
             }
 
             .ayur-mobile-app {
-                border-radius: 28px;
-                border: 1.5px solid rgba(234, 179, 8, 0.35);
-                min-height: auto;
+                border-radius: 0 !important;
+                border-top: none !important;
+                border-bottom: none !important;
+                border-left: 2px solid #7E22CE;
+                border-right: 2px solid #7E22CE;
+                box-shadow: 0 0 40px rgba(42, 8, 69, 0.12);
+                min-height: 100vh;
             }
         }
 
@@ -115,13 +121,13 @@
            TOP ROYAL HEADER (PURPLE · YELLOW · GREEN)
            ========================================================================== */
         .ayur-top-nav-bar {
-            background: #2A0845;
-            padding: 14px 18px;
+            background: #FFFFFF !important;
+            padding: 12px 18px;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            border-bottom: 2.5px solid var(--yellow-500);
-            box-shadow: 0 4px 15px rgba(42, 8, 69, 0.25);
+            justify-content: space-between;
+            border-bottom: 2px solid #7E22CE;
+            box-shadow: 0 4px 16px rgba(126, 34, 206, 0.08);
             position: relative;
             z-index: 10;
         }
@@ -136,31 +142,70 @@
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            background: var(--yellow-400);
-            color: #14532D;
+            background: linear-gradient(135deg, #7E22CE 0%, #581C87 100%);
+            color: #FFFFFF;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.15rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.05rem;
+            box-shadow: 0 2px 8px rgba(126, 34, 206, 0.25);
+            border: 1px solid #C084FC;
         }
 
         .ayur-brand-name {
             font-family: 'Cinzel', serif;
             font-size: 1.45rem;
             font-weight: 800;
-            color: #FFFFFF;
+            color: #2A0845 !important;
             letter-spacing: 1px;
             line-height: 1;
+        }
+
+        /* Order Now CTA Button next to GathHeal in Header */
+        .ayur-header-order-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #7E22CE 0%, #581C87 100%);
+            color: #FFFFFF !important;
+            padding: 7px 16px;
+            border-radius: 999px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(126, 34, 206, 0.28);
+            border: 1.5px solid #C084FC;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .ayur-header-order-btn:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #9333EA 0%, #6B21A8 100%);
+            box-shadow: 0 6px 20px rgba(126, 34, 206, 0.45);
+            color: #FFFFFF !important;
+        }
+
+        .ayur-header-order-btn:active {
+            transform: translateY(0);
+        }
+
+        .header-order-icon {
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .ayur-trust-pill {
             display: inline-flex;
             align-items: center;
             gap: 4px;
-            background: rgba(254, 240, 138, 0.15);
-            border: 1px solid rgba(254, 240, 138, 0.4);
-            color: #FEF08A;
+            background: rgba(216, 180, 254, 0.15);
+            border: 1px solid rgba(216, 180, 254, 0.5);
+            color: #F3E8FF;
             font-size: 0.72rem;
             font-weight: 700;
             padding: 4px 10px;
@@ -278,17 +323,17 @@
             gap: 7px;
             background: linear-gradient(135deg, #581C87 0%, #3B0764 100%);
             color: #FFFFFF;
-            border: 1.5px solid var(--yellow-400);
+            border: 1.5px solid #C084FC;
             border-radius: 999px;
             padding: 6px 18px;
             font-size: 0.84rem;
             font-weight: 800;
             letter-spacing: 0.6px;
-            box-shadow: 0 4px 16px rgba(88, 28, 135, 0.3), 0 0 10px rgba(234, 179, 8, 0.25);
+            box-shadow: 0 4px 16px rgba(88, 28, 135, 0.3), 0 0 10px rgba(168, 85, 247, 0.25);
         }
 
         .sec2-badge-sparkle {
-            color: var(--yellow-400);
+            color: #E9D5FF;
             font-size: 0.95rem;
         }
 
@@ -371,72 +416,34 @@
         }
 
         /* 1. Purple Scheme */
-        .card-theme-purple {
-            border: 1.5px solid #E9D5FF;
+        .card-theme-purple,
+        .card-theme-yellow,
+        .card-theme-green {
+            border: 1.5px solid #C084FC;
             box-shadow: 0 8px 24px rgba(88, 28, 135, 0.08);
         }
 
-        .card-theme-purple .card-tag-pill {
+        .card-theme-purple .card-tag-pill,
+        .card-theme-yellow .card-tag-pill,
+        .card-theme-green .card-tag-pill {
             background: #F3E8FF;
             color: #6B21A8;
             border: 1px solid #D8B4FE;
         }
 
-        .card-theme-purple .card-header-icon {
+        .card-theme-purple .card-header-icon,
+        .card-theme-yellow .card-header-icon,
+        .card-theme-green .card-header-icon {
             background: #FAF5FF;
             color: #7E22CE;
-            border: 1px solid #E9D5FF;
+            border: 1px solid #D8B4FE;
         }
 
-        .card-theme-purple:hover {
-            border-color: #C084FC;
-            box-shadow: 0 12px 28px rgba(88, 28, 135, 0.15);
-        }
-
-        /* 2. Yellow / Amber Scheme */
-        .card-theme-yellow {
-            border: 1.5px solid #FDE68A;
-            box-shadow: 0 8px 24px rgba(217, 119, 6, 0.08);
-        }
-
-        .card-theme-yellow .card-tag-pill {
-            background: #FEF3C7;
-            color: #B45309;
-            border: 1px solid #FCD34D;
-        }
-
-        .card-theme-yellow .card-header-icon {
-            background: #FFFBEB;
-            color: #D97706;
-            border: 1px solid #FDE68A;
-        }
-
-        .card-theme-yellow:hover {
-            border-color: #FBBF24;
-            box-shadow: 0 12px 28px rgba(217, 119, 6, 0.15);
-        }
-
-        /* 3. Green Scheme */
-        .card-theme-green {
-            border: 1.5px solid #BBF7D0;
-            box-shadow: 0 8px 24px rgba(22, 163, 74, 0.08);
-        }
-
-        .card-theme-green .card-tag-pill {
-            background: #DCFCE7;
-            color: #15803D;
-            border: 1px solid #86EFAC;
-        }
-
-        .card-theme-green .card-header-icon {
-            background: #F0FDF4;
-            color: #16A34A;
-            border: 1px solid #BBF7D0;
-        }
-
+        .card-theme-purple:hover,
+        .card-theme-yellow:hover,
         .card-theme-green:hover {
-            border-color: #4ADE80;
-            box-shadow: 0 12px 28px rgba(22, 163, 74, 0.15);
+            border-color: #9333EA;
+            box-shadow: 0 12px 28px rgba(126, 34, 206, 0.16);
         }
 
         /* Image Display in Cards */
@@ -444,20 +451,14 @@
             width: 100%;
             height: 195px;
             position: relative;
-            background: #FAF7FD;
+            background: #FAF5FF;
             overflow: hidden;
         }
 
-        .card-theme-purple .card-media-box {
-            background: #FAF5FF;
-        }
-
-        .card-theme-yellow .card-media-box {
-            background: #FEFCE8;
-        }
-
+        .card-theme-purple .card-media-box,
+        .card-theme-yellow .card-media-box,
         .card-theme-green .card-media-box {
-            background: #F0FDF4;
+            background: #FAF5FF;
         }
 
         .card-real-img {
@@ -565,11 +566,11 @@
            ========================================================================== */
         .sec2-summary-box {
             background: linear-gradient(135deg, #3B0764 0%, #14532D 60%, #1E3A2F 100%);
-            border: 2px solid var(--yellow-400);
+            border: 2px solid #C084FC;
             border-radius: 22px;
             padding: 22px 18px;
             color: #FFFFFF;
-            box-shadow: 0 14px 38px rgba(59, 7, 100, 0.3), 0 0 16px rgba(245, 158, 11, 0.25);
+            box-shadow: 0 14px 38px rgba(59, 7, 100, 0.3), 0 0 16px rgba(126, 34, 206, 0.25);
             position: relative;
             overflow: hidden;
             text-align: center;
@@ -583,7 +584,7 @@
             right: -30px;
             width: 120px;
             height: 120px;
-            background: radial-gradient(circle, rgba(250, 204, 21, 0.3) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(192, 132, 252, 0.25) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -592,10 +593,10 @@
             align-items: center;
             gap: 6px;
             background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(250, 204, 21, 0.5);
+            border: 1px solid #C084FC;
             padding: 4px 14px;
             border-radius: 999px;
-            color: #FEF08A;
+            color: #F3E8FF;
             font-size: 0.8rem;
             font-weight: 800;
             margin-bottom: 12px;
@@ -684,7 +685,7 @@
             background: #FFFFFF;
             padding: 30px 18px 36px;
             position: relative;
-            border-top: 2px solid #FDE68A;
+            border-top: 1.5px solid rgba(126, 34, 206, 0.15);
             text-align: center;
         }
 
@@ -698,7 +699,7 @@
             justify-content: center;
             background: linear-gradient(135deg, #4C1D95 0%, #2A0845 100%);
             color: #FFFFFF;
-            border: 1.5px solid #FCD34D;
+            border: 1.5px solid #C084FC;
             border-radius: 999px;
             padding: 6px 18px;
             font-size: 0.82rem;
@@ -741,7 +742,7 @@
             max-width: 290px;
             border-radius: 20px;
             overflow: hidden;
-            border: 2.5px solid #FDE68A;
+            border: 2px solid #C084FC;
             box-shadow: 0 12px 30px rgba(76, 29, 149, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08);
             background: #FFFFFF;
         }
@@ -840,7 +841,7 @@
             background: #FFFFFF;
             padding: 24px 18px 42px;
             position: relative;
-            border-top: 2px solid #FDE68A;
+            border-top: 1.5px solid rgba(126, 34, 206, 0.18);
             text-align: center;
         }
 
@@ -852,7 +853,7 @@
             margin-top: 26px;
             padding: 22px 14px 20px;
             background: #FFFFFF;
-            border: 2px solid #FDE68A;
+            border: 1.5px solid #C084FC;
             border-radius: 22px;
             box-shadow: 0 8px 24px rgba(42, 8, 69, 0.08);
             text-align: center;
@@ -868,7 +869,7 @@
             gap: 6px;
             background: linear-gradient(135deg, #581C87 0%, #3B0764 100%);
             color: #FFFFFF;
-            border: 1.5px solid #FACC15;
+            border: 1.5px solid #C084FC;
             padding: 4px 16px;
             border-radius: 999px;
             font-size: 0.80rem;
@@ -951,7 +952,7 @@
             padding: 2px 7px;
             border-radius: 999px;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(250, 204, 21, 0.5);
+            border: 1px solid #C084FC;
             letter-spacing: 0.3px;
         }
 
@@ -986,7 +987,7 @@
             background: #FFFFFF;
             padding: 38px 16px 42px;
             position: relative;
-            border-top: 2px solid #FDE68A;
+            border-top: 1.5px solid rgba(126, 34, 206, 0.18);
             text-align: center;
             overflow: hidden;
         }
@@ -1349,6 +1350,1019 @@
         .step-theme-tricolor .flow-step-desc {
             color: #4C1D95 !important;
         }
+
+        /* ==========================================================================
+           SECTION 6: गुणवत्ता (LARGER IMAGES & COMPACT TEXT)
+           ========================================================================== */
+        .sec6-quality-stage {
+            background: #EBF1EB;
+            padding: 32px 14px 38px;
+            text-align: center;
+        }
+
+        .sec6-badge-wrap {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sec6-quality-title,
+        h2.sec6-quality-title,
+        span.sec6-quality-title {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background: linear-gradient(135deg, #4C1D95 0%, #2A0845 100%) !important;
+            color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
+            border: 2px solid #C084FC !important;
+            border-radius: 999px !important;
+            padding: 8px 30px !important;
+            font-size: 1.25rem !important;
+            font-weight: 800 !important;
+            font-family: 'Halant', 'Hind', serif !important;
+            letter-spacing: 0.5px !important;
+            box-shadow: 0 4px 16px rgba(76, 29, 149, 0.35) !important;
+            margin: 0 !important;
+            line-height: 1.2 !important;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .sec6-quality-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .sec6-quality-card {
+            background: #FFFFFF;
+            border-radius: 18px;
+            padding: 14px 8px 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            border: 1.5px solid rgba(126, 34, 206, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .sec6-quality-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(76, 29, 149, 0.12);
+        }
+
+        .sec6-quality-logo-box {
+            width: 100%;
+            height: 140px;
+            max-width: 150px;
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        .sec6-quality-logo-img {
+            width: 100%;
+            height: 100%;
+            max-width: 135px;
+            max-height: 135px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .sec6-quality-pill {
+            width: 100%;
+            max-width: 130px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #6B21A8 0%, #4C1D95 100%);
+            color: #FFFFFF;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.80rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-align: center;
+            display: block;
+            box-shadow: 0 3px 8px rgba(76, 29, 149, 0.28);
+            border: 1px solid #7E22CE;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* ==========================================================================
+           SECTION 7: SPECIAL OFFER (EXACT MATCH TO REFERENCE WITH ROYAL PURPLE THEME)
+           ========================================================================== */
+        .sec7-offer-stage {
+            background: #FFFFFF;
+            padding: 38px 18px 42px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-top: 1.5px solid rgba(126, 34, 206, 0.18);
+        }
+
+        .sec7-offer-glow-title {
+            font-family: 'Hind', 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #2A0845;
+            margin: 0 0 20px;
+            letter-spacing: -0.2px;
+            line-height: 1.2;
+            text-shadow: none;
+        }
+
+        .sec7-offer-banner-wrap {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(42, 8, 69, 0.08);
+            border: 1.5px solid #E9D5FF;
+            background: #FFFFFF;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sec7-offer-banner-wrap:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 32px rgba(126, 34, 206, 0.18);
+            border-color: #C084FC;
+        }
+
+        .sec7-offer-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .sec7-offer-prod-title {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #2A0845;
+            margin: 22px 0 4px;
+            letter-spacing: -0.2px;
+        }
+
+        .sec7-offer-prod-subtitle {
+            font-family: 'Plus Jakarta Sans', 'Hind', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #7E22CE;
+            margin: 0 0 22px;
+            letter-spacing: 0.2px;
+        }
+
+        .sec7-offer-cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, #9333EA 0%, #7E22CE 50%, #6B21A8 100%);
+            color: #FFFFFF !important;
+            font-family: 'Hind', 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            padding: 15px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            box-sizing: border-box;
+            box-shadow: 0 8px 24px rgba(147, 51, 234, 0.5), 0 0 0 1px rgba(216, 180, 254, 0.3);
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .sec7-offer-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(147, 51, 234, 0.65), 0 0 0 1.5px rgba(232, 121, 249, 0.6);
+            background: linear-gradient(135deg, #A855F7 0%, #9333EA 50%, #7E22CE 100%);
+        }
+
+        .sec7-offer-cta-btn:active {
+            transform: translateY(1px);
+        }
+
+        .sec7-offer-cta-btn span.cta-arrow {
+            font-size: 1.3rem;
+            display: inline-block;
+            transition: transform 0.25s ease;
+        }
+
+        .sec7-offer-cta-btn:hover span.cta-arrow {
+            transform: translateX(4px) translateY(-2px);
+        }
+
+        /* ==========================================================================
+           SECTION 8: ऑर्डर करें (ORDER & CONSULTATION FORM)
+           ========================================================================== */
+        .sec8-order-stage {
+            background: #FFFFFF;
+            padding: 38px 18px 46px;
+            text-align: center;
+            position: relative;
+            border-top: 2px solid #E9D5FF;
+            scroll-margin-top: 15px;
+        }
+
+        .sec8-badge-pill-wrap {
+            margin-bottom: 8px;
+        }
+
+        .sec8-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #581C87 0%, #3B0764 100%);
+            color: #FFFFFF;
+            border: 1.5px solid #C084FC;
+            padding: 5px 18px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            box-shadow: 0 4px 14px rgba(88, 28, 135, 0.22);
+            font-family: 'Plus Jakarta Sans', 'Hind', sans-serif;
+        }
+
+        .sec8-main-title {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #2A0845;
+            margin: 6px 0 4px;
+            line-height: 1.25;
+            letter-spacing: -0.2px;
+        }
+
+        .sec8-tagline {
+            font-family: 'Hind', 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #7E22CE;
+            margin: 0 0 24px;
+            letter-spacing: 0.2px;
+            line-height: 1.4;
+        }
+
+        .sec8-order-card {
+            background: #FFFFFF;
+            border: 1.5px solid #E9D5FF;
+            border-radius: 22px;
+            padding: 24px 18px 22px;
+            box-shadow: 0 12px 36px rgba(88, 28, 135, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        @keyframes orderCardPulse {
+            0% {
+                box-shadow: 0 12px 36px rgba(88, 28, 135, 0.08), 0 0 0 0 rgba(126, 34, 206, 0.6);
+                border-color: #E9D5FF;
+            }
+            50% {
+                box-shadow: 0 16px 42px rgba(88, 28, 135, 0.22), 0 0 0 5px rgba(192, 132, 252, 0.7);
+                border-color: #9333EA;
+                transform: translateY(-2px);
+            }
+            100% {
+                box-shadow: 0 12px 36px rgba(88, 28, 135, 0.08), 0 0 0 0 rgba(126, 34, 206, 0);
+                border-color: #E9D5FF;
+                transform: translateY(0);
+            }
+        }
+
+        .sec8-order-card.order-card-highlight {
+            animation: orderCardPulse 1.4s ease-out;
+        }
+
+        .sec8-field-group {
+            margin-bottom: 18px;
+        }
+
+        .sec8-label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Hind', 'Plus Jakarta Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #173326;
+            margin-bottom: 7px;
+        }
+
+        .sec8-input-box {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .sec8-input-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #475569;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            transition: all 0.25s ease;
+            z-index: 2;
+        }
+
+        .sec8-input-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: #475569;
+            transition: stroke 0.25s ease;
+        }
+
+        .sec8-input {
+            width: 100%;
+            padding: 13px 16px 13px 44px;
+            background: #FAFAF9;
+            border: 1.5px solid #CBD5E1;
+            border-radius: 14px;
+            font-family: 'Plus Jakarta Sans', 'Hind', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #0F172A;
+            outline: none;
+            box-sizing: border-box;
+            transition: all 0.25s ease;
+        }
+
+        .sec8-input::placeholder {
+            color: #94A3B8;
+            font-weight: 450;
+            font-size: 0.95rem;
+        }
+
+        .sec8-input:focus {
+            border-color: #7E22CE;
+            background: #FFFFFF;
+            box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.18);
+        }
+
+        .sec8-input-box:focus-within .sec8-input-icon svg {
+            stroke: #7E22CE;
+        }
+
+        /* Error state when invalid Indian mobile number is entered */
+        .sec8-input.input-has-error {
+            border-color: #DC2626 !important;
+            background: #FEF2F2 !important;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.18) !important;
+        }
+
+        .sec8-input-box:has(.input-has-error) .sec8-input-icon svg {
+            stroke: #DC2626 !important;
+        }
+
+        .sec8-phone-error {
+            display: none;
+            color: #DC2626;
+            font-family: 'Hind', 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.86rem;
+            font-weight: 600;
+            margin-top: 6px;
+            text-align: left;
+            line-height: 1.4;
+        }
+
+        .sec8-phone-error.is-visible {
+            display: block;
+            animation: sec8FadeInError 0.22s ease-out;
+        }
+
+        @keyframes sec8FadeInError {
+            from {
+                opacity: 0;
+                transform: translateY(-3px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .sec8-submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #7E22CE 0%, #9333EA 50%, #6B21A8 100%);
+            color: #FFFFFF;
+            border: none;
+            border-radius: 999px;
+            padding: 15px 22px;
+            font-family: 'Hind', 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 750;
+            letter-spacing: 0.4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 8px 24px rgba(126, 34, 206, 0.4);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            margin-top: 8px;
+            box-sizing: border-box;
+        }
+
+        .sec8-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(126, 34, 206, 0.55);
+            background: linear-gradient(135deg, #9333EA 0%, #A855F7 50%, #7E22CE 100%);
+        }
+
+        .sec8-submit-btn:active {
+            transform: translateY(1px);
+        }
+
+        .submit-btn-cart-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            line-height: 1;
+            transition: transform 0.25s ease;
+        }
+
+        .submit-btn-cart-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: #FFFFFF;
+        }
+
+        .sec8-submit-btn:hover .submit-btn-cart-icon {
+            transform: scale(1.12) rotate(-6deg);
+        }
+
+        .submit-btn-arrow {
+            display: inline-block;
+            font-size: 1.2rem;
+            line-height: 1;
+            transition: transform 0.25s ease;
+        }
+
+        .sec8-submit-btn:hover .submit-btn-arrow {
+            transform: translateX(4px);
+        }
+
+        .sec8-trust-badges-strip {
+            margin-top: 18px;
+            background: #FAF5FF;
+            border: 1px solid #E9D5FF;
+            border-radius: 14px;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-family: 'Plus Jakarta Sans', 'Hind', sans-serif;
+            font-size: 0.80rem;
+            font-weight: 600;
+            color: #581C87;
+            line-height: 1.4;
+        }
+
+        .sec8-trust-badge-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .sec8-trust-badge-dot {
+            color: #C084FC;
+            font-size: 0.9rem;
+        }
+
+        /* =========================================================
+           SECTION 9: ग्राहक अनुभव (CUSTOMER REVIEWS) STYLES - LIGHT THEME
+           ========================================================= */
+        .sec9-reviews-stage {
+            background: linear-gradient(180deg, #FAF5FF 0%, #FFFFFF 100%);
+            padding: 34px 16px 36px 16px;
+            position: relative;
+            border-top: 1px solid rgba(147, 51, 234, 0.12);
+            border-bottom: 1px solid rgba(147, 51, 234, 0.12);
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .sec9-header-wrap {
+            text-align: center;
+            margin-bottom: 22px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sec9-main-title {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: #2A0845;
+            /* Royal Purple */
+            line-height: 1.25;
+            margin: 0;
+            letter-spacing: -0.3px;
+        }
+
+        .sec9-cards-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sec9-review-card {
+            background: #FFFFFF;
+            border: 1.5px solid #7E22CE;
+            border-radius: 18px;
+            padding: 16px 14px 16px 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            position: relative;
+            box-shadow: 0 4px 18px rgba(42, 8, 69, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+            box-sizing: border-box;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .sec9-review-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(42, 8, 69, 0.12), 0 0 12px rgba(126, 34, 206, 0.25);
+        }
+
+        /* Left Column: Avatar & Location Badge */
+        .sec9-card-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            width: 64px;
+        }
+
+        .sec9-avatar-frame {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            border: 2px solid #7E22CE;
+            padding: 2px;
+            background: #FAF5FF;
+            box-shadow: 0 2px 6px rgba(126, 34, 206, 0.15);
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .sec9-avatar-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .sec9-city-badge {
+            background: #6B21A8;
+            color: #FFFFFF;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-top: 6px;
+            text-align: center;
+            white-space: nowrap;
+            box-shadow: 0 1px 4px rgba(107, 33, 168, 0.25);
+            line-height: 1.2;
+            width: 100%;
+            max-width: 62px;
+            box-sizing: border-box;
+            letter-spacing: 0.2px;
+        }
+
+        /* Right Column: Name, Stars, Quote */
+        .sec9-card-right {
+            flex: 1;
+            min-width: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sec9-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .sec9-reviewer-name {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #2A0845;
+            /* Royal Purple */
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .sec9-stars {
+            color: #F59E0B;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            white-space: nowrap;
+            line-height: 1;
+        }
+
+        .sec9-review-text {
+            font-family: 'Hind', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #334155;
+            /* Crisp readable dark text */
+            margin: 0;
+            word-break: break-word;
+        }
+
+        /* Faint Watermark Quote */
+        .sec9-quote-watermark {
+            position: absolute;
+            right: 8px;
+            bottom: -6px;
+            font-family: 'Georgia', serif;
+            font-size: 50px;
+            line-height: 1;
+            color: rgba(126, 34, 206, 0.10);
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+
+        /* =========================================================
+           SECTION 10: FAQs (FREQUENTLY ASKED QUESTIONS) - PURPLE LUXURY
+           ========================================================= */
+        .sec10-faq-stage {
+            background: linear-gradient(180deg, #FAF5FF 0%, #FFFFFF 100%);
+            padding: 36px 16px 42px;
+            position: relative;
+            border-top: 1px solid rgba(126, 34, 206, 0.12);
+            border-bottom: 1px solid rgba(126, 34, 206, 0.12);
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .sec10-faq-stage::before {
+            display: none;
+        }
+
+        .sec10-faq-header {
+            text-align: center;
+            margin-bottom: 22px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sec10-faq-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1.5px solid #7E22CE;
+            border-radius: 999px;
+            padding: 4px 22px;
+            color: #6B21A8;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: #F3E8FF;
+            box-shadow: 0 2px 8px rgba(126, 34, 206, 0.12);
+            margin-bottom: 10px;
+        }
+
+        .sec10-faq-title {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: #2A0845;
+            line-height: 1.25;
+            margin: 0;
+            letter-spacing: -0.3px;
+        }
+
+        .sec10-faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sec10-faq-card {
+            background: #FFFFFF;
+            border: 1.5px solid #7E22CE;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(42, 8, 69, 0.08);
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+        }
+
+        .sec10-faq-card:hover {
+            box-shadow: 0 6px 20px rgba(126, 34, 206, 0.14);
+        }
+
+        .sec10-faq-card.is-open {
+            box-shadow: 0 8px 24px rgba(126, 34, 206, 0.15);
+            border-color: #6B21A8;
+        }
+
+        .sec10-faq-question-btn {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            cursor: pointer;
+            text-align: left;
+            user-select: none;
+            outline: none;
+        }
+
+        .sec10-faq-q-text {
+            font-family: 'Hind', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: #2A0845;
+            line-height: 1.35;
+            margin: 0;
+        }
+
+        .sec10-faq-icon {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7E22CE;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sec10-faq-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2.5;
+        }
+
+        .sec10-faq-card.is-open .sec10-faq-icon {
+            transform: rotate(180deg);
+            color: #6B21A8;
+        }
+
+        .sec10-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, padding 0.35s ease;
+            opacity: 0;
+            padding: 0 16px;
+        }
+
+        .sec10-faq-card.is-open .sec10-faq-answer {
+            max-height: 220px;
+            opacity: 1;
+            padding: 0 16px 16px;
+        }
+
+        .sec10-faq-ans-inner {
+            border-top: 1px solid #F3E8FF;
+            padding-top: 10px;
+            font-family: 'Hind', sans-serif;
+            font-size: 0.90rem;
+            line-height: 1.55;
+            color: #334155;
+            margin: 0;
+        }
+
+        /* =========================================================
+           FOOTER: DISCLAIMER & LEGAL LINKS - LIGHT THEME
+           ========================================================= */
+        .ayur-site-footer {
+            background: #FAF5FF;
+            border-top: 1.5px solid rgba(126, 34, 206, 0.15);
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .footer-disclaimer-wrap {
+            padding: 24px 18px 20px;
+            border-bottom: 1px solid rgba(126, 34, 206, 0.12);
+            box-sizing: border-box;
+        }
+
+        .footer-disclaimer-title {
+            color: #6B21A8; /* Royal Purple */
+            font-size: 0.88rem;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.2;
+        }
+
+        .footer-disclaimer-desc {
+            font-family: 'Hind', sans-serif;
+            font-size: 0.82rem;
+            line-height: 1.6;
+            color: #475569; /* Crisp dark slate */
+            margin: 0;
+        }
+
+        .footer-links-wrap {
+            padding: 16px 14px 75px;
+            background: #F3E8FF;
+            text-align: center;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(126, 34, 206, 0.08);
+        }
+
+        .footer-legal-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px 18px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-legal-link {
+            color: #581C87;
+            font-family: 'Plus Jakarta Sans', 'Hind', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .footer-legal-link:hover {
+            color: #2A0845;
+            text-decoration: underline;
+        }
+
+        /* =========================================================
+           STICKY BOTTOM FLOATING BAR (ROYAL PURPLE LUXURY THEME)
+           ========================================================= */
+        .ayur-sticky-bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 450px;
+            background: #FFFFFF;
+            border-top: 1.5px solid #E9D5FF;
+            box-shadow: 0 -4px 22px rgba(88, 28, 135, 0.12);
+            padding: 9px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            z-index: 9999;
+            box-sizing: border-box;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .sticky-footer-brand {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            min-width: 0;
+            flex: 1;
+        }
+
+        .sticky-footer-logo-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            line-height: 1.15;
+        }
+
+        .sticky-leaf-icon {
+            font-size: 1.25rem;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .sticky-brand-name {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 1.28rem;
+            font-weight: 800;
+            color: #2A0845;
+            letter-spacing: -0.2px;
+            line-height: 1.15;
+        }
+
+        .sticky-footer-sub {
+            font-family: 'Hind', 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #6B21A8;
+            margin: 2px 0 0;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .sticky-footer-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #7E22CE 0%, #9333EA 50%, #6B21A8 100%);
+            color: #FFFFFF !important;
+            text-decoration: none;
+            border: 1px solid #D8B4FE;
+            border-radius: 999px;
+            padding: 7px 16px 7px 8px;
+            box-shadow: 0 4px 16px rgba(126, 34, 206, 0.45);
+            transition: all 0.25s ease;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .sticky-footer-cta-btn:hover {
+            background: linear-gradient(135deg, #9333EA 0%, #A855F7 50%, #7E22CE 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 22px rgba(126, 34, 206, 0.6);
+            border-color: #E9D5FF;
+        }
+
+        .sticky-footer-cta-btn:active {
+            transform: translateY(1px);
+        }
+
+        .sticky-cart-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.22);
+            border: 1.5px solid rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+
+        .sticky-cart-badge svg {
+            width: 17px;
+            height: 17px;
+            stroke: #FFFFFF;
+        }
+
+        .sticky-footer-cta-btn:hover .sticky-cart-badge {
+            transform: scale(1.1) rotate(-6deg);
+        }
+
+        .sticky-btn-text {
+            font-family: 'Hind', 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 750;
+            color: #FFFFFF;
+            letter-spacing: 0.2px;
+            white-space: nowrap;
+        }
+
+        .sticky-btn-arrow {
+            color: #FFFFFF;
+            font-size: 1.15rem;
+            display: inline-block;
+            transition: transform 0.25s ease;
+            line-height: 1;
+        }
+
+        .sticky-footer-cta-btn:hover .sticky-btn-arrow {
+            transform: translateX(3px);
+        }
     </style>
 </head>
 
@@ -1366,6 +2380,10 @@
                     <span class="ayur-brand-leaf">🌿</span>
                     <span class="ayur-brand-name">GathHeal</span>
                 </div>
+                <a href="#orderForm" class="ayur-header-order-btn" id="headerOrderBtn">
+                    <span class="header-order-icon"><i class="ti ti-shopping-cart"></i></span>
+                    <span class="header-order-text">Order Now</span>
+                </a>
             </header>
 
             <!-- Tri-Color Feature Ribbon (Purple · Green · Yellow) -->
@@ -1384,7 +2402,7 @@
             <!-- ================= SECTION 1: HERO / HOOK ================= -->
             <!-- Using the Exact Reference Image as requested -->
             <section class="sec1-hero-stage" id="heroHookPage1">
-                <img src="images/74f0321a-2b49-40f5-8655-4b306a73337c.png"
+                <img src="images/9ad48cb2-c38f-4698-a377-2929ebec461b.png"
                     alt="गांठ का बढ़ता आकार और बदलती बनावट चिंता बढ़ा रही है? कभी सख़्तपन, कभी दर्द या सूजन—ये बदलाव रोज़मर्रा की ज़िंदगी को प्रभावित कर रहे हैं। मन में यह चिंता भी बनी रहती है कि कहीं आगे चलकर परेशानी और न बढ़ जाए।"
                     class="sec1-exact-creative-img" loading="eager">
             </section>
@@ -1548,14 +2566,14 @@
                 </div>
 
                 <!-- Grand Title -->
-                <h2 class="sec3-grand-title">GathHeal Capsules</h2>
+                <!-- <h2 class="sec3-grand-title">GathHeal Capsules</h2> -->
                 <p class="sec3-tagline">आपकी दिनचर्या के लिए Ayurvedic Herbal Support</p>
 
                 <!-- Product Showcase Stage -->
                 <div class="sec3-product-showcase">
                     <div class="sec3-image-frame">
-                        <img src="images/product.jpg" alt="GathHeal Capsules - Natural Lump Heal" class="sec3-product-img"
-                            loading="lazy">
+                        <img src="images/product.jpg" alt="GathHeal Capsules - Natural Lump Heal"
+                            class="sec3-product-img" loading="lazy">
                     </div>
                 </div>
 
@@ -1619,8 +2637,8 @@
                         <div class="timeline-card-col">
                             <article class="timeline-flow-card">
                                 <div class="flow-card-media">
-                                    <img src="images/media_1793094139141.png"
-                                        alt="Inflammation Support" class="flow-card-img" loading="lazy">
+                                    <img src="images/media_1793094139141.png" alt="Inflammation Support"
+                                        class="flow-card-img" loading="lazy">
                                 </div>
                                 <div class="flow-card-body">
                                     <!-- <span class="flow-step-num">०१</span> -->
@@ -1650,8 +2668,8 @@
                         <div class="timeline-card-col">
                             <article class="timeline-flow-card">
                                 <div class="flow-card-media">
-                                    <img src="images/media_1793094294484.png"
-                                        alt="Comfort Support" class="flow-card-img" loading="lazy">
+                                    <img src="images/media_1793094294484.png" alt="Comfort Support"
+                                        class="flow-card-img" loading="lazy">
                                 </div>
                                 <div class="flow-card-body">
                                     <!-- <span class="flow-step-num">०२</span> -->
@@ -1684,8 +2702,8 @@
                         <div class="timeline-card-col">
                             <article class="timeline-flow-card">
                                 <div class="flow-card-media">
-                                    <img src="images/media_1793094365807.png"
-                                        alt="Natural Recovery Support" class="flow-card-img" loading="lazy">
+                                    <img src="images/media_1793094365807.png" alt="Natural Recovery Support"
+                                        class="flow-card-img" loading="lazy">
                                 </div>
                                 <div class="flow-card-body">
                                     <!-- <span class="flow-step-num">०३</span> -->
@@ -1715,8 +2733,8 @@
                         <div class="timeline-card-col">
                             <article class="timeline-flow-card">
                                 <div class="flow-card-media">
-                                    <img src="images/media_1793094545791.png"
-                                        alt="Immunity Support" class="flow-card-img" loading="lazy">
+                                    <img src="images/media_1793094545791.png" alt="Immunity Support"
+                                        class="flow-card-img" loading="lazy">
                                 </div>
                                 <div class="flow-card-body">
                                     <!-- <span class="flow-step-num">०४</span> -->
@@ -1753,8 +2771,8 @@
                         <!-- Herb 1: Kalmegh -->
                         <div class="herb-card">
                             <div class="herb-img-frame">
-                                <img src="images/media_1793101666374.png"
-                                    alt="Kalmegh - कालमेघ" class="herb-img" loading="lazy">
+                                <img src="images/media_1793101666374.png" alt="Kalmegh - कालमेघ" class="herb-img"
+                                    loading="lazy">
                                 <!-- <span class="herb-tag-badge">Herb 01</span> -->
                             </div>
                             <div class="herb-info">
@@ -1766,8 +2784,8 @@
                         <!-- Herb 2: Chirchita -->
                         <div class="herb-card">
                             <div class="herb-img-frame">
-                                <img src="images/media_1793101751838.png"
-                                    alt="Chirchita - चिरचिटा" class="herb-img" loading="lazy">
+                                <img src="images/media_1793101751838.png" alt="Chirchita - चिरचिटा" class="herb-img"
+                                    loading="lazy">
                                 <!-- <span class="herb-tag-badge">Herb 02</span> -->
                             </div>
                             <div class="herb-info">
@@ -1779,8 +2797,8 @@
                         <!-- Herb 3: Pashanbhed -->
                         <div class="herb-card">
                             <div class="herb-img-frame">
-                                <img src="images/media_1793101797246.png"
-                                    alt="Pashanbhed - पाषाणभेद" class="herb-img" loading="lazy">
+                                <img src="images/media_1793101797246.png" alt="Pashanbhed - पाषाणभेद" class="herb-img"
+                                    loading="lazy">
                                 <!-- <span class="herb-tag-badge">Herb 03</span> -->
                             </div>
                             <div class="herb-info">
@@ -1792,8 +2810,8 @@
                         <!-- Herb 4: Makoi Leaf -->
                         <div class="herb-card">
                             <div class="herb-img-frame">
-                                <img src="images/media_1793101846173.png"
-                                    alt="Makoi Leaf - मकोय" class="herb-img" loading="lazy">
+                                <img src="images/media_1793101846173.png" alt="Makoi Leaf - मकोय" class="herb-img"
+                                    loading="lazy">
                                 <!-- <span class="herb-tag-badge">Herb 04</span> -->
                             </div>
                             <div class="herb-info">
@@ -1806,7 +2824,360 @@
                 </div>
             </section>
 
+            <!-- ================= SECTION 6: गुणवत्ता ================= -->
+            <section class="sec6-quality-stage" id="qualitySec">
+                <div class="sec6-badge-wrap">
+                    <span class="sec6-quality-title" role="heading" aria-level="2">गुणवत्ता</span>
+                </div>
+
+                <div class="sec6-quality-grid">
+
+                    <!-- Card 1: GMP -->
+                    <div class="sec6-quality-card">
+                        <div class="sec6-quality-logo-box">
+                            <img src="images/cert1.avif" alt="GMP" class="sec6-quality-logo-img" loading="lazy">
+                        </div>
+                        <div class="sec6-quality-pill">GMP</div>
+                    </div>
+
+                    <!-- Card 2: ISO -->
+                    <div class="sec6-quality-card">
+                        <div class="sec6-quality-logo-box">
+                            <img src="images/cert2.avif" alt="ISO" class="sec6-quality-logo-img" loading="lazy">
+                        </div>
+                        <div class="sec6-quality-pill">ISO</div>
+                    </div>
+
+                    <!-- Card 3: FSSAI -->
+                    <div class="sec6-quality-card">
+                        <div class="sec6-quality-logo-box">
+                            <img src="images/cert3 (1).avif" alt="FSSAI" class="sec6-quality-logo-img" loading="lazy">
+                        </div>
+                        <div class="sec6-quality-pill">FSSAI</div>
+                    </div>
+
+                    <!-- Card 4: LAB TESTED -->
+                    <div class="sec6-quality-card">
+                        <div class="sec6-quality-logo-box">
+                            <img src="images/cert4.avif" alt="LAB TESTED" class="sec6-quality-logo-img" loading="lazy">
+                        </div>
+                        <div class="sec6-quality-pill">LAB TESTED</div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ================= SECTION 7: SPECIAL OFFER ================= -->
+            <section class="sec7-offer-stage" id="specialOfferSec">
+
+                <!-- Glowing Purple Headline -->
+                <h2 class="sec7-offer-glow-title">Diwali Special Offer</h2>
+
+                <!-- User Uploaded Diwali Offer Image Creative -->
+                <div class="sec7-offer-banner-wrap">
+                    <img src="images/b0a9ecad-f5d9-4809-9661-550b2d71cea6.png" alt="Happy Diwali Special Offer - Flat 40% Off" class="sec7-offer-banner-img"
+                        loading="lazy">
+                </div>
+
+                <!-- Product Title & Subtitle -->
+                <h3 class="sec7-offer-prod-title">GathHeal Capsules</h3>
+                <p class="sec7-offer-prod-subtitle">Ayurvedic Herbal Wellness Formula</p>
+
+                <!-- Purple CTA Action Button (matching user request for purple instead of red) -->
+                <a href="#orderForm" class="sec7-offer-cta-btn">
+                    <span>सलाह लें | ऑर्डर करें</span>
+                    <span class="cta-arrow">↗</span>
+                </a>
+
+            </section>
+
+            <!-- ================= SECTION 8: ऑर्डर करें ================= -->
+            <section class="sec8-order-stage" id="orderForm">
+
+                <!-- Top Royal Pill Badge -->
+                <div class="sec8-badge-pill-wrap">
+                    <!-- <span class="sec8-badge-pill">
+                        📦 Section 8: ऑर्डर करें
+                    </span> -->
+                </div>
+
+                <!-- Main Title & Tagline -->
+                <h2 class="sec8-main-title">ऑर्डर करें</h2>
+                <p class="sec8-tagline">GathHeal की जानकारी और ऑर्डर के लिए</p>
+
+                <!-- Order Form Card Box -->
+                <div class="sec8-order-card">
+                    <form id="gathhealOrderForm" novalidate>
+
+                        <!-- Field 1: आपका नाम -->
+                        <div class="sec8-field-group">
+                            <label class="sec8-label" for="userName">
+                                <span>आपका नाम</span>
+                            </label>
+                            <div class="sec8-input-box">
+                                <span class="sec8-input-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </span>
+                                <input type="text" id="userName" name="userName" class="sec8-input"
+                                    placeholder="[ अपना नाम ]" required autocomplete="name">
+                            </div>
+                        </div>
+
+                        <!-- Field 2: मोबाइल नंबर -->
+                        <div class="sec8-field-group">
+                            <label class="sec8-label" for="userPhone">
+                                <span>मोबाइल नंबर</span>
+                            </label>
+                            <div class="sec8-input-box">
+                                <span class="sec8-input-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </span>
+                                <input type="tel" id="userPhone" name="userPhone" class="sec8-input"
+                                    placeholder="अपना 10 अंकों का नंबर दर्ज करें" maxlength="10" inputmode="numeric"
+                                    required autocomplete="tel">
+                            </div>
+                            <!-- Error Message Display below Phone field -->
+                            <div class="sec8-phone-error" id="phoneErrorMsg">
+                                कृपया 6-9 से शुरू होने वाला 10 अंकों का मान्य मोबाइल नंबर दर्ज करें
+                            </div>
+                        </div>
+
+                        <!-- Submit Button with Shopping Cart Icon -->
+                        <button type="submit" class="sec8-submit-btn" id="sec8SubmitBtn">
+                            <span class="submit-btn-cart-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                            </span>
+                            <span>Order Now</span>
+                            <span class="submit-btn-arrow">→</span>
+                        </button>
+
+                    </form>
+
+                    <!-- Trust Strip -->
+                    <div class="sec8-trust-badges-strip">
+                        <span class="sec8-trust-badge-item">🔒 Secure Order</span>
+                        <span class="sec8-trust-badge-dot">•</span>
+                        <span class="sec8-trust-badge-item">📦 Delivery Details</span>
+                        <span class="sec8-trust-badge-dot">•</span>
+                        <span class="sec8-trust-badge-item">✅ Product Information</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =========================================================
+                 SECTION 9: ग्राहक अनुभव (CUSTOMER REVIEWS)
+                 ========================================================= -->
+            <section class="sec9-reviews-stage" id="customerReviews">
+
+                <!-- Section Header -->
+                <div class="sec9-header-wrap">
+                    <h2 class="sec9-main-title">ग्राहकों के अनुभव</h2>
+                </div>
+
+                <!-- Review Cards List -->
+                <div class="sec9-cards-list">
+
+                    <!-- Card 1: प्रज्ञा शर्मा (गुड़गांव) -->
+                    <article class="sec9-review-card">
+                        <div class="sec9-card-left">
+                            <div class="sec9-avatar-frame">
+                                <img src="images/download.jpg" alt="प्रज्ञा शर्मा" loading="lazy">
+                            </div>
+                            <span class="sec9-city-badge">गुड़गांव</span>
+                        </div>
+                        <div class="sec9-card-right">
+                            <div class="sec9-card-header">
+                                <h3 class="sec9-reviewer-name">प्रज्ञा शर्मा</h3>
+                                <div class="sec9-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <p class="sec9-review-text">“शरीर में गांठ और लगातार भारीपन की वजह से बहुत असहजता महसूस होती
+                                थी। GathHeal को नियमित इस्तेमाल करने के बाद गांठ में काफी हल्कापन और आराम महसूस हुआ।”
+                            </p>
+                        </div>
+                        <div class="sec9-quote-watermark" aria-hidden="true">”</div>
+                    </article>
+
+                    <!-- Card 2: शिवम गुप्ता (मुंबई) -->
+                    <article class="sec9-review-card">
+                        <div class="sec9-card-left">
+                            <div class="sec9-avatar-frame">
+                                <img src="images/images (1).jpg" alt="शिवम गुप्ता" loading="lazy">
+                            </div>
+                            <span class="sec9-city-badge">मुंबई</span>
+                        </div>
+                        <div class="sec9-card-right">
+                            <div class="sec9-card-header">
+                                <h3 class="sec9-reviewer-name">शिवम गुप्ता</h3>
+                                <div class="sec9-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <p class="sec9-review-text">“हाथ पर गांठ की वजह से बहुत जकड़न और परेशानी रहती थी। GathHeal
+                                के नियमित सेवन ने मुझे गांठ की जकड़न से बहुत अच्छा आराम और सुकून दिया है।”</p>
+                        </div>
+                        <div class="sec9-quote-watermark" aria-hidden="true">”</div>
+                    </article>
+
+                    <!-- Card 3: शिवानी जायसवाल (नई दिल्ली) -->
+                    <article class="sec9-review-card">
+                        <div class="sec9-card-left">
+                            <div class="sec9-avatar-frame">
+                                <img src="images/images.jpg" alt="शिवानी जायसवाल" loading="lazy">
+                            </div>
+                            <span class="sec9-city-badge">नई दिल्ली</span>
+                        </div>
+                        <div class="sec9-card-right">
+                            <div class="sec9-card-header">
+                                <h3 class="sec9-reviewer-name">शिवानी जायसवाल</h3>
+                                <div class="sec9-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                            </div>
+                            <p class="sec9-review-text">“पहले गांठ और सूजन को लेकर काफी चिंता रहती थी। GathHeal को अपनी
+                                दिनचर्या में शामिल करने के बाद अब मुझे बहुत अच्छा सुधार और राहत मिली है।”</p>
+                        </div>
+                        <div class="sec9-quote-watermark" aria-hidden="true">”</div>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- =========================================================
+                 SECTION 10: FAQs (FREQUENTLY ASKED QUESTIONS)
+                 ========================================================= -->
+            <section class="sec10-faq-stage" id="faqSection">
+
+                <!-- Header -->
+                <div class="sec10-faq-header">
+                    <div class="sec10-faq-badge">FAQ</div>
+                    <h2 class="sec10-faq-title">गांठ और GathHeal से जुड़े सवाल</h2>
+                </div>
+
+                <!-- FAQ Accordion List -->
+                <div class="sec10-faq-list">
+
+                    <!-- Q1 -->
+                    <div class="sec10-faq-card">
+                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false" onclick="toggleFaq(this)">
+                            <span class="sec10-faq-q-text">1. GathHeal क्या है?</span>
+                            <span class="sec10-faq-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="sec10-faq-answer">
+                            <p class="sec10-faq-ans-inner">चुनिंदा Ayurvedic herbs से तैयार एक herbal wellness formulation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="sec10-faq-card">
+                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false" onclick="toggleFaq(this)">
+                            <span class="sec10-faq-q-text">2. क्या यह हर तरह की गांठ के लिए है?</span>
+                            <span class="sec10-faq-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="sec10-faq-answer">
+                            <p class="sec10-faq-ans-inner">नहीं। गांठ के कारण अलग हो सकते हैं। चिकित्सकीय जाँच ज़रूरी है।</p>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="sec10-faq-card">
+                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false" onclick="toggleFaq(this)">
+                            <span class="sec10-faq-q-text">3. इसे कैसे लें?</span>
+                            <span class="sec10-faq-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="sec10-faq-answer">
+                            <p class="sec10-faq-ans-inner">Product label या qualified healthcare professional की सलाह के अनुसार।</p>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="sec10-faq-card">
+                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false" onclick="toggleFaq(this)">
+                            <span class="sec10-faq-q-text">4. क्या COD उपलब्ध है?</span>
+                            <span class="sec10-faq-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="sec10-faq-answer">
+                            <p class="sec10-faq-ans-inner">जहाँ सेवा उपलब्ध हो, वहाँ COD मिल सकता है।</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =========================================================
+                 FOOTER: DISCLAIMER & LEGAL LINKS
+                 ========================================================= -->
+            <footer class="ayur-site-footer">
+
+                <!-- Disclaimer Box -->
+                <div class="footer-disclaimer-wrap">
+                    <h3 class="footer-disclaimer-title">DISCLAIMER</h3>
+                    <p class="footer-disclaimer-desc">
+                        GathHeal कोई medical diagnosis, treatment या cure नहीं है। यह डॉक्टर की जाँच या सलाह का विकल्प नहीं है। किसी भी नई, बढ़ती या बदलती गांठ के लिए qualified healthcare professional से जाँच कराएँ। Product का उपयोग label और विशेषज्ञ की सलाह के अनुसार करें।
+                    </p>
+                </div>
+
+                <!-- Legal Policy Links Bar -->
+                <div class="footer-links-wrap">
+                    <nav class="footer-legal-nav" aria-label="Legal Links">
+                        <a href="#privacy" class="footer-legal-link">Privacy</a>
+                        <a href="#terms" class="footer-legal-link">Terms</a>
+                        <a href="#shipping" class="footer-legal-link">Shipping</a>
+                        <a href="#cancellation" class="footer-legal-link">Cancellation</a>
+                        <a href="#contact" class="footer-legal-link">Contact</a>
+                        <a href="#legal" class="footer-legal-link">Legal Disclaimer</a>
+                    </nav>
+                </div>
+
+            </footer>
+
         </main>
+
+        <!-- Sticky Bottom Floating Order Bar (Always Visible While Scrolling) -->
+        <aside class="ayur-sticky-bottom-bar" id="stickyBottomOrderBar" aria-label="Quick Order Bar">
+            <div class="sticky-footer-brand">
+                <div class="sticky-footer-logo-row">
+                    <span class="sticky-leaf-icon" aria-hidden="true">🌿</span>
+                    <span class="sticky-brand-name">GathHeal</span>
+                </div>
+                <p class="sticky-footer-sub">गांठ के लिए 100% प्राकृतिक समाधान</p>
+            </div>
+            <a href="#orderForm" class="sticky-footer-cta-btn" id="stickyOrderBtn" aria-label="अभी ऑर्डर करें">
+                <span class="sticky-cart-badge" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </span>
+                <span class="sticky-btn-text">अभी ऑर्डर करें</span>
+                <span class="sticky-btn-arrow" aria-hidden="true">→</span>
+            </a>
+        </aside>
 
     </div>
 
@@ -1855,6 +3226,166 @@
                 initScrollReveal();
             }
         })();
+
+        /* Interactive FAQ Accordion Logic */
+        function toggleFaq(btn) {
+            var card = btn.closest('.sec10-faq-card');
+            if (!card) return;
+            var isOpen = card.classList.contains('is-open');
+
+            // Optional: close other cards or toggle independently
+            if (isOpen) {
+                card.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+            } else {
+                card.classList.add('is-open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        /* Instant Direct Jump to Section 8 Order Form (No scrolling animation) */
+        function initOrderScrollTriggers() {
+            var orderTriggers = document.querySelectorAll('a[href="#orderForm"], .ayur-header-order-btn, .sec7-offer-cta-btn');
+            orderTriggers.forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var targetSec = document.getElementById('orderForm');
+                    if (targetSec) {
+                        // Temporarily disable smooth scroll to jump instantly
+                        var htmlEl = document.documentElement;
+                        var prevBehavior = htmlEl.style.scrollBehavior;
+                        htmlEl.style.scrollBehavior = 'auto';
+
+                        targetSec.scrollIntoView({ behavior: 'auto', block: 'start' });
+
+                        setTimeout(function () {
+                            htmlEl.style.scrollBehavior = prevBehavior || '';
+                        }, 50);
+
+                        // Visual highlight pulse animation on order card
+                        var card = targetSec.querySelector('.sec8-order-card');
+                        if (card) {
+                            card.classList.remove('order-card-highlight');
+                            void card.offsetWidth; // Reflow to re-trigger
+                            card.classList.add('order-card-highlight');
+                        }
+
+                        // Focus into Name input field immediately
+                        var firstInput = document.getElementById('userName');
+                        if (firstInput) {
+                            firstInput.focus({ preventScroll: true });
+                        }
+                    }
+                });
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initOrderScrollTriggers);
+        } else {
+            initOrderScrollTriggers();
+        }
+
+        /* Section 8: Indian Mobile Number Validation & Form Handling */
+        function initIndianPhoneValidation() {
+            var phoneInput = document.getElementById('userPhone');
+            var phoneError = document.getElementById('phoneErrorMsg');
+            var nameInput = document.getElementById('userName');
+            var orderForm = document.getElementById('gathhealOrderForm');
+
+            if (!phoneInput || !phoneError || !orderForm) return;
+
+            function validatePhone(isBlurOrSubmit) {
+                var raw = phoneInput.value.replace(/\D/g, '');
+
+                // Handle pasted numbers with +91 or leading 0
+                if (raw.length === 12 && raw.startsWith('91')) {
+                    raw = raw.slice(2);
+                } else if (raw.length === 11 && raw.startsWith('0')) {
+                    raw = raw.slice(1);
+                }
+                raw = raw.slice(0, 10);
+                phoneInput.value = raw;
+
+                if (raw.length === 0) {
+                    if (isBlurOrSubmit) {
+                        phoneError.classList.add('is-visible');
+                        phoneInput.classList.add('input-has-error');
+                        return false;
+                    } else {
+                        phoneError.classList.remove('is-visible');
+                        phoneInput.classList.remove('input-has-error');
+                        return true;
+                    }
+                }
+
+                var firstDigit = raw.charAt(0);
+                var startsWithIndian = ['6', '7', '8', '9'].includes(firstDigit);
+
+                // If starting digit is not 6, 7, 8, 9 -> invalid immediately
+                if (!startsWithIndian) {
+                    phoneError.classList.add('is-visible');
+                    phoneInput.classList.add('input-has-error');
+                    return false;
+                }
+
+                // If starts with 6-9:
+                if (raw.length === 10) {
+                    phoneError.classList.remove('is-visible');
+                    phoneInput.classList.remove('input-has-error');
+                    return true;
+                } else {
+                    // Less than 10 digits
+                    if (isBlurOrSubmit) {
+                        phoneError.classList.add('is-visible');
+                        phoneInput.classList.add('input-has-error');
+                        return false;
+                    } else {
+                        phoneError.classList.remove('is-visible');
+                        phoneInput.classList.remove('input-has-error');
+                        return false;
+                    }
+                }
+            }
+
+            phoneInput.addEventListener('input', function () {
+                validatePhone(false);
+            });
+
+            phoneInput.addEventListener('blur', function () {
+                if (phoneInput.value.trim().length > 0) {
+                    validatePhone(true);
+                }
+            });
+
+            orderForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var nameVal = nameInput ? nameInput.value.trim() : '';
+                if (!nameVal) {
+                    alert('कृपया अपना नाम दर्ज करें');
+                    if (nameInput) nameInput.focus();
+                    return;
+                }
+
+                var isPhoneValid = validatePhone(true);
+                if (!isPhoneValid) {
+                    phoneInput.focus();
+                    return;
+                }
+
+                alert('धन्यवाद! आपकी जानकारी प्राप्त हो गई है। हमारी विशेषज्ञ टीम जल्द ही आपसे संपर्क करेगी।');
+                orderForm.reset();
+                phoneError.classList.remove('is-visible');
+                phoneInput.classList.remove('input-has-error');
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initIndianPhoneValidation);
+        } else {
+            initIndianPhoneValidation();
+        }
     </script>
 
 </body>
