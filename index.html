@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 
     <!-- Custom Modern Design Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=2026.14">
+    <link rel="stylesheet" href="styles.css?v=2026.19">
 
     <style>
         /* ==========================================================================
@@ -801,11 +801,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 38px;
-            height: 38px;
-            min-width: 38px;
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
             border-radius: 12px;
-            font-size: 1.25rem;
+            background: #F3E8FF;
+            border: 1px solid #D8B4FE;
+            box-shadow: 0 2px 6px rgba(126, 34, 206, 0.08);
+            color: #7E22CE;
+        }
+
+        .sec3-point-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: #7E22CE;
+            display: block;
         }
 
         .sec3-point-text {
@@ -1028,49 +1038,26 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 20px;
             text-align: left;
             padding-left: 6px;
         }
 
-        /* Animated Vertical Glowing Spine (Unified Royal Purple Theme) */
+        /* Clean Solid Vertical Spine (No glow effects, no moving beam) */
         .timeline-spine {
             position: absolute;
-            left: 31px;
-            top: 24px;
-            bottom: 30px;
-            width: 4px;
-            background: linear-gradient(180deg, #C084FC 0%, #7E22CE 50%, #9333EA 100%);
-            border-radius: 4px;
+            left: 30.5px;
+            top: 36px;
+            bottom: 40px;
+            width: 3px;
+            background: #9333EA;
+            border-radius: 3px;
             z-index: 1;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(168, 85, 247, 0.35);
+            box-shadow: none !important;
         }
 
         .spine-glow-beam {
-            position: absolute;
-            top: -80px;
-            left: 0;
-            width: 100%;
-            height: 110px;
-            background: linear-gradient(180deg, transparent, #D8B4FE 30%, #9333EA 70%, transparent);
-            animation: spineBeamFlow 3s ease-in-out infinite;
-        }
-
-        @keyframes spineBeamFlow {
-            0% {
-                top: -110px;
-                opacity: 0;
-            }
-
-            25% {
-                opacity: 1;
-            }
-
-            100% {
-                top: 100%;
-                opacity: 0;
-            }
+            display: none !important;
         }
 
         /* Timeline Step Row: One by One Scroll Reveal Animation */
@@ -1137,43 +1124,10 @@
             display: block;
         }
 
-        /* Intermediate Bead with Popping Entrance */
-        .timeline-bead-row {
-            display: flex;
-            align-items: center;
-            height: 20px;
-            position: relative;
-            z-index: 2;
-            opacity: 0;
-            transform: scale(0.2);
-            transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .timeline-bead-row.is-visible {
-            opacity: 1;
-            transform: scale(1);
-        }
-
+        /* Intermediate Beads Hidden */
+        .timeline-bead-row,
         .timeline-bead {
-            margin-left: 28px;
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            animation: beadPulse 2s infinite ease-in-out;
-        }
-
-        @keyframes beadPulse {
-
-            0%,
-            100% {
-                transform: scale(0.9);
-                opacity: 0.75;
-            }
-
-            50% {
-                transform: scale(1.35);
-                opacity: 1;
-            }
+            display: none !important;
         }
 
         /* Timeline Card Column & Slide In */
@@ -1258,9 +1212,9 @@
         .step-theme-yellow .timeline-node-ring,
         .step-theme-tricolor .timeline-node-ring,
         .timeline-node-ring {
-            border: 2px solid #C084FC;
-            background: #FAF5FF;
-            box-shadow: 0 4px 14px rgba(168, 85, 247, 0.25);
+            border: 2px solid #9333EA;
+            background: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
         }
 
         .step-theme-purple .timeline-flow-card,
@@ -1299,8 +1253,7 @@
         .bead-theme-green .timeline-bead,
         .bead-theme-yellow .timeline-bead,
         .timeline-bead {
-            background: #A855F7;
-            box-shadow: 0 0 8px rgba(168, 85, 247, 0.45);
+            display: none !important;
         }
 
         .step-theme-purple .flow-card-media,
@@ -1356,10 +1309,11 @@
            ========================================================================== */
         .sec6-quality-stage {
             background: #EBF1EB;
-            padding: 32px 14px 38px;
+            padding: 34px 10px 40px;
             text-align: center;
         }
 
+        .sec6-quality-badge-wrap,
         .sec6-badge-wrap {
             margin-bottom: 20px;
             display: flex;
@@ -1377,7 +1331,7 @@
             -webkit-text-fill-color: #FFFFFF !important;
             border: 2px solid #C084FC !important;
             border-radius: 999px !important;
-            padding: 8px 30px !important;
+            padding: 8px 32px !important;
             font-size: 1.25rem !important;
             font-weight: 800 !important;
             font-family: 'Halant', 'Hind', serif !important;
@@ -1396,55 +1350,62 @@
 
         .sec6-quality-card {
             background: #FFFFFF;
-            border-radius: 18px;
-            padding: 14px 8px 12px;
+            border-radius: 20px;
+            padding: 14px 10px 14px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-            border: 1.5px solid rgba(126, 34, 206, 0.08);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            border: 1.5px solid rgba(126, 34, 206, 0.1);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
         .sec6-quality-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 22px rgba(76, 29, 149, 0.12);
+            box-shadow: 0 8px 22px rgba(76, 29, 149, 0.14);
         }
 
         .sec6-quality-logo-box {
             width: 100%;
-            height: 140px;
-            max-width: 150px;
+            height: 172px;
+            max-width: 100%;
             background: #FFFFFF;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 14px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 6px;
             margin-bottom: 12px;
             box-sizing: border-box;
+            overflow: hidden;
         }
 
         .sec6-quality-logo-img {
             width: 100%;
             height: 100%;
-            max-width: 135px;
-            max-height: 135px;
+            max-width: 165px;
+            max-height: 165px;
             object-fit: contain;
             display: block;
+            transform: scale(1.12);
+            transition: transform 0.25s ease;
+        }
+
+        .sec6-quality-card:hover .sec6-quality-logo-img {
+            transform: scale(1.16);
         }
 
         .sec6-quality-pill {
             width: 100%;
-            max-width: 130px;
+            max-width: 140px;
             margin: 0 auto;
             background: linear-gradient(135deg, #6B21A8 0%, #4C1D95 100%);
             color: #FFFFFF;
             border-radius: 999px;
-            padding: 6px 10px;
-            font-size: 0.80rem;
+            padding: 7px 12px;
+            font-size: 0.86rem;
             font-weight: 700;
             letter-spacing: 0.5px;
             text-align: center;
@@ -2158,46 +2119,39 @@
         }
 
         /* =========================================================
-           FOOTER: DISCLAIMER & LEGAL LINKS - LIGHT THEME
+           FOOTER: SUBTLE / LOW-CONTRAST DISCLAIMER (LIGHT THEME)
            ========================================================= */
         .ayur-site-footer {
-            background: #FAF5FF;
-            border-top: 1.5px solid rgba(126, 34, 206, 0.15);
+            background: #FFFFFF;
+            border-top: 1px solid #F1F5F9;
             box-sizing: border-box;
             width: 100%;
         }
 
         .footer-disclaimer-wrap {
-            padding: 24px 18px 20px;
-            border-bottom: 1px solid rgba(126, 34, 206, 0.12);
+            padding: 24px 20px 14px;
+            text-align: center;
             box-sizing: border-box;
-        }
-
-        .footer-disclaimer-title {
-            color: #6B21A8; /* Royal Purple */
-            font-size: 0.88rem;
-            font-weight: 800;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            margin: 0 0 10px 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            line-height: 1.2;
         }
 
         .footer-disclaimer-desc {
-            font-family: 'Hind', sans-serif;
-            font-size: 0.82rem;
-            line-height: 1.6;
-            color: #475569; /* Crisp dark slate */
-            margin: 0;
+            font-family: 'Hind', 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.76rem;
+            line-height: 1.55;
+            color: #94A3B8; /* Subtle faint grey on light background - Invisible compliance style */
+            margin: 0 auto;
+            max-width: 420px;
+            text-align: center;
+            letter-spacing: 0.15px;
+            opacity: 0.75;
         }
 
         .footer-links-wrap {
-            padding: 16px 14px 75px;
-            background: #F3E8FF;
+            padding: 10px 14px 75px;
+            background: #FFFFFF;
             text-align: center;
             box-sizing: border-box;
-            border-top: 1px solid rgba(126, 34, 206, 0.08);
+            border-top: 1px solid #F8FAFC;
         }
 
         .footer-legal-nav {
@@ -2205,23 +2159,25 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 10px 18px;
+            gap: 10px 16px;
             margin: 0;
             padding: 0;
         }
 
         .footer-legal-link {
-            color: #581C87;
-            font-family: 'Plus Jakarta Sans', 'Hind', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 600;
+            color: #94A3B8;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.74rem;
+            font-weight: 500;
             text-decoration: none;
             transition: color 0.2s ease;
             white-space: nowrap;
+            opacity: 0.75;
         }
 
         .footer-legal-link:hover {
-            color: #2A0845;
+            color: #7E22CE;
+            opacity: 1;
             text-decoration: underline;
         }
 
@@ -2265,11 +2221,23 @@
             line-height: 1.15;
         }
 
-        .sticky-leaf-icon {
-            font-size: 1.25rem;
-            line-height: 1;
+        .sticky-leaf-badge {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7E22CE 0%, #581C87 100%);
             display: inline-flex;
             align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(126, 34, 206, 0.28);
+            border: 1px solid #C084FC;
+            flex-shrink: 0;
+        }
+
+        .sticky-leaf-badge svg {
+            width: 15px;
+            height: 15px;
+            stroke: #FFFFFF;
         }
 
         .sticky-brand-name {
@@ -2377,7 +2345,12 @@
             <!-- Top Royal Brand Navigation Bar -->
             <header class="ayur-top-nav-bar">
                 <div class="ayur-brand-group">
-                    <span class="ayur-brand-leaf">🌿</span>
+                    <span class="ayur-brand-leaf" aria-hidden="true">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                        </svg>
+                    </span>
                     <span class="ayur-brand-name">GathHeal</span>
                 </div>
                 <a href="#orderForm" class="ayur-header-order-btn" id="headerOrderBtn">
@@ -2589,19 +2562,34 @@
                 <div class="sec3-points-list">
                     <!-- 1. चुनिंदा Ayurvedic herbs -->
                     <div class="sec3-point-item point-purple">
-                        <span class="sec3-point-icon">🌿</span>
+                        <span class="sec3-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E22CE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                            </svg>
+                        </span>
                         <span class="sec3-point-text">चुनिंदा Ayurvedic herbs</span>
                     </div>
 
                     <!-- 2. आसान capsule format -->
                     <div class="sec3-point-item point-purple">
-                        <span class="sec3-point-icon">💊</span>
+                        <span class="sec3-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E22CE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path>
+                                <path d="m8.5 8.5 7 7"></path>
+                            </svg>
+                        </span>
                         <span class="sec3-point-text">आसान capsule format</span>
                     </div>
 
                     <!-- 3. Daily routine के अनुकूल -->
                     <div class="sec3-point-item point-purple">
-                        <span class="sec3-point-icon">⏰</span>
+                        <span class="sec3-point-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E22CE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </span>
                         <span class="sec3-point-text">Daily routine के अनुकूल</span>
                     </div>
                 </div>
@@ -2615,12 +2603,10 @@
                 <h2 class="sec4-grand-title">How GathHeal Work</h2>
                 <p class="sec4-tagline">रोज़मर्रा की देखभाल के लिए</p>
 
-                <!-- Creative Animated Timeline Flow (Scroll-Reveal One-by-One in Purple, Green, Yellow) -->
+                <!-- Clean Timeline Flow (Royal Purple) -->
                 <div class="sec4-timeline-flow">
-                    <!-- Vertical Glowing Spine with Animated Flowing Beam -->
-                    <div class="timeline-spine">
-                        <div class="spine-glow-beam"></div>
-                    </div>
+                    <!-- Clean Vertical Spine -->
+                    <div class="timeline-spine"></div>
 
                     <!-- Step 01: Inflammation Support (Theme: Purple 💜) -->
                     <div class="timeline-step-row step-theme-purple" data-step="1">
@@ -2649,11 +2635,6 @@
                         </div>
                     </div>
 
-                    <!-- Intermediate Glowing Purple-to-Green Bead -->
-                    <div class="timeline-bead-row bead-theme-purple">
-                        <span class="timeline-bead"></span>
-                    </div>
-
                     <!-- Step 02: Comfort Support (Single Theme: Purple) -->
                     <div class="timeline-step-row step-theme-purple" data-step="2">
                         <div class="timeline-node-wrap">
@@ -2678,11 +2659,6 @@
                                 </div>
                             </article>
                         </div>
-                    </div>
-
-                    <!-- Intermediate Glowing Purple Bead -->
-                    <div class="timeline-bead-row bead-theme-purple">
-                        <span class="timeline-bead"></span>
                     </div>
 
                     <!-- Step 03: Natural Recovery Support (Single Theme: Purple) -->
@@ -2712,11 +2688,6 @@
                                 </div>
                             </article>
                         </div>
-                    </div>
-
-                    <!-- Intermediate Glowing Purple Bead -->
-                    <div class="timeline-bead-row bead-theme-purple">
-                        <span class="timeline-bead"></span>
                     </div>
 
                     <!-- Step 04: Immunity Support (Single Theme: Purple) -->
@@ -2754,7 +2725,7 @@
                     <!-- Ingredients Badge -->
                     <div class="ingredients-badge-wrap">
                         <span class="ingredients-pill-badge">
-                            🌿 Ingredients
+                            <i class="ti ti-leaf"></i> Ingredients
                         </span>
                     </div>
 
@@ -2964,11 +2935,11 @@
 
                     <!-- Trust Strip -->
                     <div class="sec8-trust-badges-strip">
-                        <span class="sec8-trust-badge-item">🔒 Secure Order</span>
+                        <span class="sec8-trust-badge-item"><i class="ti ti-lock"></i> Secure Order</span>
                         <span class="sec8-trust-badge-dot">•</span>
-                        <span class="sec8-trust-badge-item">📦 Delivery Details</span>
+                        <span class="sec8-trust-badge-item"><i class="ti ti-package"></i> Delivery Details</span>
                         <span class="sec8-trust-badge-dot">•</span>
-                        <span class="sec8-trust-badge-item">✅ Product Information</span>
+                        <span class="sec8-trust-badge-item"><i class="ti ti-circle-check"></i> Product Information</span>
                     </div>
 
                 </div>
@@ -3133,11 +3104,10 @@
                  ========================================================= -->
             <footer class="ayur-site-footer">
 
-                <!-- Disclaimer Box -->
+                <!-- Disclaimer Box (Invisible / Low-Contrast Style) -->
                 <div class="footer-disclaimer-wrap">
-                    <h3 class="footer-disclaimer-title">DISCLAIMER</h3>
                     <p class="footer-disclaimer-desc">
-                        GathHeal कोई medical diagnosis, treatment या cure नहीं है। यह डॉक्टर की जाँच या सलाह का विकल्प नहीं है। किसी भी नई, बढ़ती या बदलती गांठ के लिए qualified healthcare professional से जाँच कराएँ। Product का उपयोग label और विशेषज्ञ की सलाह के अनुसार करें।
+                        Disclaimer: This product is intended for general Ayurvedic herbal support. Results may vary from person to person. It is not intended to diagnose, treat, cure, or prevent any disease. Please read the product label and follow the recommended usage. Consult a qualified healthcare professional for persistent or serious health concerns.
                     </p>
                 </div>
 
@@ -3161,7 +3131,12 @@
         <aside class="ayur-sticky-bottom-bar" id="stickyBottomOrderBar" aria-label="Quick Order Bar">
             <div class="sticky-footer-brand">
                 <div class="sticky-footer-logo-row">
-                    <span class="sticky-leaf-icon" aria-hidden="true">🌿</span>
+                    <span class="sticky-leaf-badge" aria-hidden="true">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                        </svg>
+                    </span>
                     <span class="sticky-brand-name">GathHeal</span>
                 </div>
                 <p class="sticky-footer-sub">गांठ के लिए 100% प्राकृतिक समाधान</p>
@@ -3185,7 +3160,7 @@
     <script>
         (function () {
             function initScrollReveal() {
-                var revealItems = document.querySelectorAll('.timeline-step-row, .timeline-bead-row');
+                var revealItems = document.querySelectorAll('.timeline-step-row');
                 if (!revealItems.length) return;
 
                 if ('IntersectionObserver' in window) {
