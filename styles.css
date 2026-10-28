@@ -160,29 +160,69 @@ body {
   margin-bottom: 8px;
 }
 
-.ingredients-pill-badge {
+.sec2-badge-pill,
+.sec3-badge-pill,
+.sec4-badge-pill,
+.ingredients-pill-badge,
+.sec6-quality-title,
+.sec7-badge-pill,
+.sec8-badge-pill,
+.sec9-badge-pill,
+.sec10-faq-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: linear-gradient(135deg, #581C87 0%, #3B0764 100%);
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #4C1D95 0%, #2A0845 100%);
   color: #FFFFFF;
-  border: 1.5px solid #C084FC;
-  padding: 4px 16px;
+  border: 2px solid #C084FC;
+  padding: 8px 32px;
   border-radius: 999px;
-  font-size: 0.80rem;
-  font-weight: 800;
-  letter-spacing: 0.6px;
-  box-shadow: 0 3px 12px rgba(88, 28, 135, 0.25);
+  font-size: 1.25rem;
+  font-weight: 750;
+  font-family: 'Hind', 'Baloo 2', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: normal;
+  box-shadow: 0 4px 16px rgba(76, 29, 149, 0.35);
+  line-height: 1.2;
 }
 
-.ingredients-heading {
-  font-family: 'Halant', 'Hind', serif;
-  font-size: 1.55rem;
-  font-weight: 800;
-  color: #2A0845;
-  margin: 4px 0 4px;
-  line-height: 1.25;
-  letter-spacing: -0.2px;
+.sec2-badge-pill-wrap,
+.sec3-badge-wrap,
+.sec4-badge-wrap,
+.ingredients-badge-wrap,
+.sec6-badge-wrap,
+.sec7-badge-wrap,
+.sec8-badge-pill-wrap,
+.sec9-badge-wrap,
+.sec10-faq-badge-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.ingredients-pill-badge i,
+.ingredients-pill-badge svg {
+  font-size: 1.25rem;
+}
+
+.sec2-main-title,
+.sec3-tagline,
+.ayur-mobile-app .ayur-sec4-container .sec4-tagline,
+.ayur-sec4-container p.sec4-tagline,
+.sec4-tagline,
+.ingredients-heading,
+.sec6-quality-subtitle,
+.sec8-tagline,
+.sec10-faq-title {
+  font-family: 'Halant', 'Hind', serif !important;
+  font-size: 1.65rem !important;
+  font-weight: 800 !important;
+  color: #2A0845 !important;
+  text-align: center !important;
+  line-height: 1.30 !important;
+  letter-spacing: -0.3px !important;
+  margin: 0 auto 16px !important;
 }
 
 .ingredients-sub-tagline {
@@ -254,19 +294,20 @@ body {
 }
 
 .herb-info {
-  padding: 10px 8px 12px;
+  padding: 12px 6px 14px;
   text-align: center;
   background: #FAF5FF;
   border-top: 1px solid #F3E8FF;
 }
 
 .herb-name {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.96rem;
-  font-weight: 800;
-  color: #2A0845;
-  margin: 0 0 2px;
-  line-height: 1.2;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 1.30rem !important;
+  font-weight: 800 !important;
+  color: #2A0845 !important;
+  margin: 0 0 2px !important;
+  line-height: 1.25 !important;
+  text-align: center !important;
 }
 
 .herb-hindi-name {
@@ -275,6 +316,151 @@ body {
   font-weight: 700;
   color: #15803D;
   display: block;
+}
+
+.sec6-quality-subtitle {
+  font-family: 'Halant', 'Hind', serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #2A0845;
+  text-align: center;
+  margin: 0 0 22px;
+  letter-spacing: normal;
+  line-height: 1.3;
+}
+
+.sec6-quality-logo-box {
+  width: 100%;
+  height: 152px;
+  max-width: 100%;
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.sec6-quality-logo-img {
+  width: 100%;
+  height: 100%;
+  max-width: 155px;
+  max-height: 155px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+/* Optical balance: calibrating image scales so all 4 certificates look identical in size */
+.sec6-quality-logo-img.cert-gmp {
+  transform: scale(1.86);
+}
+.sec6-quality-card:hover .sec6-quality-logo-img.cert-gmp {
+  transform: scale(1.92);
+}
+
+.sec6-quality-logo-img.cert-iso {
+  transform: scale(1.10);
+}
+.sec6-quality-card:hover .sec6-quality-logo-img.cert-iso {
+  transform: scale(1.15);
+}
+
+.sec6-quality-logo-img.cert-fssai {
+  transform: scale(1.58);
+}
+.sec6-quality-card:hover .sec6-quality-logo-img.cert-fssai {
+  transform: scale(1.64);
+}
+
+.sec6-quality-logo-img.cert-lab {
+  transform: scale(0.92);
+}
+.sec6-quality-card:hover .sec6-quality-logo-img.cert-lab {
+  transform: scale(0.97);
+}
+
+/* ================= SECTION 9: CUSTOMER REVIEWS ENLARGED TYPOGRAPHY ================= */
+.sec9-main-title {
+  font-family: 'Halant', 'Hind', serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2A0845;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: normal;
+}
+
+.sec9-review-card {
+  background: #FFFFFF;
+  border: 2px solid #7E22CE;
+  border-radius: 20px;
+  padding: 18px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sec9-card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 76px;
+}
+
+.sec9-avatar-frame {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2.5px solid #7E22CE;
+  padding: 2px;
+  background: #FAF5FF;
+}
+
+.sec9-city-badge {
+  background: #6B21A8;
+  color: #FFFFFF;
+  font-size: 0.92rem;
+  font-weight: 750;
+  padding: 4px 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: normal;
+}
+
+.sec9-reviewer-name {
+  font-family: 'Halant', 'Hind', serif;
+  font-size: 1.38rem;
+  font-weight: 800;
+  color: #2A0845;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+.sec9-stars {
+  color: #F59E0B;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.sec9-review-text {
+  font-family: 'Hind', sans-serif;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: #1E1B4B;
+  font-weight: 550;
+  margin: 0;
+  word-break: break-word;
+  letter-spacing: normal;
 }
 
 /* ================= BOTANICAL DESKTOP BACKDROP & WATERMARK MOTIFS ================= */

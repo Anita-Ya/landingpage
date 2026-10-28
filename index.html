@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 
     <!-- Custom Modern Design Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=2026.22">
+    <link rel="stylesheet" href="styles.css?v=2026.30">
 
     <style>
         /* ==========================================================================
@@ -312,24 +312,53 @@
         }
 
         /* Royal Section Badge */
-        .sec2-badge-pill-wrap {
-            text-align: center;
-            margin-bottom: 12px;
+        /* ==========================================================================
+           UNIVERSAL SECTION BADGE PILLS (SAME EXACT STYLE, SIZE & BORDER ACROSS ALL SECTIONS)
+           ========================================================================== */
+        .sec2-badge-pill,
+        .sec3-badge-pill,
+        .sec4-badge-pill,
+        .ingredients-pill-badge,
+        .sec6-quality-title,
+        .sec7-badge-pill,
+        .sec8-badge-pill,
+        .sec9-badge-pill,
+        .sec10-faq-badge {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            background: linear-gradient(135deg, #4C1D95 0%, #2A0845 100%) !important;
+            color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
+            border: 2px solid #C084FC !important;
+            border-radius: 999px !important;
+            padding: 8px 32px !important;
+            font-size: 1.25rem !important;
+            font-weight: 750 !important;
+            font-family: 'Hind', 'Baloo 2', 'Plus Jakarta Sans', sans-serif !important;
+            letter-spacing: normal !important;
+            box-shadow: 0 4px 16px rgba(76, 29, 149, 0.35) !important;
+            line-height: 1.2 !important;
+            text-shadow: none !important;
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
         }
 
-        .sec2-badge-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            background: linear-gradient(135deg, #581C87 0%, #3B0764 100%);
-            color: #FFFFFF;
-            border: 1.5px solid #C084FC;
-            border-radius: 999px;
-            padding: 6px 18px;
-            font-size: 0.84rem;
-            font-weight: 800;
-            letter-spacing: 0.6px;
-            box-shadow: 0 4px 16px rgba(88, 28, 135, 0.3), 0 0 10px rgba(168, 85, 247, 0.25);
+        .sec2-badge-pill-wrap,
+        .sec3-badge-wrap,
+        .sec4-badge-wrap,
+        .ingredients-badge-wrap,
+        .sec6-badge-wrap,
+        .sec7-badge-wrap,
+        .sec8-badge-pill-wrap,
+        .sec9-badge-wrap,
+        .sec10-faq-badge-wrap,
+        .sec10-faq-header {
+            display: flex !important;
+            justify-content: center !important;
+            margin-bottom: 14px !important;
+            text-align: center !important;
         }
 
         .sec2-badge-sparkle {
@@ -690,22 +719,26 @@
         }
 
         .sec3-badge-wrap {
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .sec3-badge-pill {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #4C1D95 0%, #2A0845 100%);
-            color: #FFFFFF;
-            border: 1.5px solid #C084FC;
-            border-radius: 999px;
-            padding: 6px 18px;
-            font-size: 0.82rem;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 14px rgba(76, 29, 149, 0.25);
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background: linear-gradient(135deg, #4C1D95 0%, #2A0845 100%) !important;
+            color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
+            border: 2px solid #C084FC !important;
+            border-radius: 999px !important;
+            padding: 8px 32px !important;
+            font-size: 1.25rem !important;
+            font-weight: 750 !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 4px 16px rgba(76, 29, 149, 0.35) !important;
+            line-height: 1.2 !important;
+            text-shadow: none !important;
         }
 
         .sec3-grand-title {
@@ -720,7 +753,7 @@
         }
 
         .sec3-tagline {
-            font-size: 0.98rem;
+            font-size: 16px;
             font-weight: 700;
             color: #15803D;
             text-align: center;
@@ -870,22 +903,33 @@
         }
 
         .ingredients-badge-wrap {
-            margin-bottom: 8px;
+            margin-bottom: 14px;
         }
 
         .ingredients-pill-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: linear-gradient(135deg, #581C87 0%, #3B0764 100%);
-            color: #FFFFFF;
-            border: 1.5px solid #C084FC;
-            padding: 4px 16px;
-            border-radius: 999px;
-            font-size: 0.80rem;
-            font-weight: 800;
-            letter-spacing: 0.6px;
-            box-shadow: 0 3px 12px rgba(88, 28, 135, 0.25);
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            background: linear-gradient(135deg, #4C1D95 0%, #2A0845 100%) !important;
+            color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
+            border: 2px solid #C084FC !important;
+            padding: 8px 30px !important;
+            border-radius: 999px !important;
+            font-size: 1.25rem !important;
+            font-weight: 750 !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 4px 16px rgba(76, 29, 149, 0.35) !important;
+            line-height: 1.2 !important;
+            text-shadow: none !important;
+        }
+
+        .ingredients-pill-badge i,
+        .ingredients-pill-badge svg {
+            font-size: 1.25rem !important;
+            stroke-width: 2.2 !important;
         }
 
         .ingredients-heading {
@@ -1315,9 +1359,20 @@
 
         .sec6-quality-badge-wrap,
         .sec6-badge-wrap {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: center;
+        }
+
+        .sec6-quality-subtitle {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #2A0845;
+            text-align: center;
+            margin: 0 0 22px;
+            letter-spacing: normal;
+            line-height: 1.3;
         }
 
         .sec6-quality-title,
@@ -1385,16 +1440,44 @@
         .sec6-quality-logo-img {
             width: 100%;
             height: 100%;
-            max-width: 165px;
-            max-height: 165px;
+            max-width: 155px;
+            max-height: 155px;
             object-fit: contain;
             display: block;
-            transform: scale(1.12);
             transition: transform 0.25s ease;
         }
 
-        .sec6-quality-card:hover .sec6-quality-logo-img {
-            transform: scale(1.16);
+        /* Optical balance: calibrating image scales so all 4 certificates look identical in size */
+        .sec6-quality-logo-img.cert-gmp {
+            transform: scale(1.60);
+        }
+
+        .sec6-quality-card:hover .sec6-quality-logo-img.cert-gmp {
+            transform: scale(1.66);
+        }
+
+        .sec6-quality-logo-img.cert-iso {
+            transform: scale(1.08);
+        }
+
+        .sec6-quality-card:hover .sec6-quality-logo-img.cert-iso {
+            transform: scale(1.14);
+        }
+
+        .sec6-quality-logo-img.cert-fssai {
+            transform: scale(1.35);
+        }
+
+        .sec6-quality-card:hover .sec6-quality-logo-img.cert-fssai {
+            transform: scale(1.40);
+        }
+
+        .sec6-quality-logo-img.cert-lab {
+            transform: scale(0.86);
+        }
+
+        .sec6-quality-card:hover .sec6-quality-logo-img.cert-lab {
+            transform: scale(0.91);
         }
 
         .sec6-quality-pill {
@@ -1588,11 +1671,13 @@
                 box-shadow: 0 12px 36px rgba(88, 28, 135, 0.08), 0 0 0 0 rgba(126, 34, 206, 0.6);
                 border-color: #E9D5FF;
             }
+
             50% {
                 box-shadow: 0 16px 42px rgba(88, 28, 135, 0.22), 0 0 0 5px rgba(192, 132, 252, 0.7);
                 border-color: #9333EA;
                 transform: translateY(-2px);
             }
+
             100% {
                 box-shadow: 0 12px 36px rgba(88, 28, 135, 0.08), 0 0 0 0 rgba(126, 34, 206, 0);
                 border-color: #E9D5FF;
@@ -1710,6 +1795,7 @@
                 opacity: 0;
                 transform: translateY(-3px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1807,12 +1893,225 @@
             font-size: 0.9rem;
         }
 
+        /* ==========================================================================
+           THANK YOU CONFIRMATION MODAL (EXACT MATCH TO REFERENCE IN ROYAL PURPLE)
+           ========================================================================== */
+        .thankyou-modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.72);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+            box-sizing: border-box;
+        }
+
+        .thankyou-modal-backdrop.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .thankyou-modal-card {
+            background: #FFFFFF;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 26px;
+            padding: 34px 22px 28px;
+            box-shadow: 0 25px 60px rgba(76, 29, 149, 0.3), 0 10px 25px rgba(0, 0, 0, 0.15);
+            border: 2px solid #E9D5FF;
+            text-align: center;
+            position: relative;
+            transform: scale(0.9) translateY(24px);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            max-height: 94vh;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        .thankyou-modal-backdrop.is-active .thankyou-modal-card {
+            transform: scale(1) translateY(0);
+        }
+
+        .thankyou-modal-close-btn {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #FAF5FF;
+            border: 1px solid #D8B4FE;
+            color: #7E22CE;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.3rem;
+            line-height: 1;
+            transition: all 0.2s ease;
+        }
+
+        .thankyou-modal-close-btn:hover {
+            background: #7E22CE;
+            color: #FFFFFF;
+        }
+
+        /* Purple Circular Badge with Checkmark */
+        .thankyou-icon-wrap {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            background: #F3E8FF;
+            border: 2px solid #C084FC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(147, 51, 234, 0.18);
+        }
+
+        .thankyou-icon-svg {
+            width: 34px;
+            height: 34px;
+            stroke: #7E22CE;
+        }
+
+        /* Purple Pill: Order Confirmed! */
+        .thankyou-status-badge {
+            display: inline-block;
+            background: #FAF5FF;
+            color: #7E22CE;
+            border: 1.5px solid #D8B4FE;
+            padding: 4px 18px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            margin-bottom: 14px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            box-shadow: 0 2px 8px rgba(126, 34, 206, 0.08);
+        }
+
+        .thankyou-title {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: #2A0845;
+            margin: 0 0 10px;
+            line-height: 1.3;
+        }
+
+        .thankyou-title span {
+            color: #7E22CE;
+        }
+
+        .thankyou-desc {
+            font-size: 0.95rem;
+            color: #4B5563;
+            line-height: 1.5;
+            margin: 0 0 20px;
+            font-family: 'Hind', sans-serif;
+        }
+
+        .thankyou-desc strong {
+            color: #7E22CE;
+            font-weight: 700;
+        }
+
+        /* Summary List Table */
+        .thankyou-summary-box {
+            background: #FAF5FF;
+            border: 1.5px solid #E9D5FF;
+            border-radius: 16px;
+            padding: 12px 18px;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .thankyou-summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            font-size: 0.92rem;
+            border-bottom: 1px dashed #E9D5FF;
+        }
+
+        .thankyou-summary-row:last-child {
+            border-bottom: none;
+            padding-bottom: 2px;
+        }
+
+        .thankyou-label {
+            color: #6B7280;
+            font-weight: 500;
+        }
+
+        .thankyou-val {
+            color: #1F2937;
+            font-weight: 750;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .thankyou-delivery-free {
+            color: #16A34A !important;
+            font-weight: 750;
+        }
+
+        .thankyou-note {
+            font-size: 0.86rem;
+            color: #6B7280;
+            margin: 0 0 20px;
+            line-height: 1.45;
+            font-family: 'Hind', sans-serif;
+        }
+
+        /* Bottom Purple OK Button */
+        .thankyou-confirm-btn {
+            background: linear-gradient(135deg, #7E22CE 0%, #9333EA 100%);
+            color: #FFFFFF;
+            border: 1.5px solid #A855F7;
+            border-radius: 12px;
+            padding: 12px 32px;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: 'Hind', sans-serif;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(126, 34, 206, 0.35);
+            transition: all 0.25s ease;
+            width: 100%;
+            max-width: 220px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .thankyou-confirm-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(126, 34, 206, 0.5);
+        }
+
+        .thankyou-confirm-btn:active {
+            transform: translateY(1px);
+        }
+
         /* =========================================================
            SECTION 9: ग्राहक अनुभव (CUSTOMER REVIEWS) STYLES - LIGHT THEME
            ========================================================= */
         .sec9-reviews-stage {
             background: linear-gradient(180deg, #FAF5FF 0%, #FFFFFF 100%);
-            padding: 34px 16px 36px 16px;
+            padding: 38px 16px 42px 16px;
             position: relative;
             border-top: 1px solid rgba(147, 51, 234, 0.12);
             border-bottom: 1px solid rgba(147, 51, 234, 0.12);
@@ -1822,38 +2121,38 @@
 
         .sec9-header-wrap {
             text-align: center;
-            margin-bottom: 22px;
+            margin-bottom: 24px;
             position: relative;
             z-index: 1;
         }
 
         .sec9-main-title {
             font-family: 'Halant', 'Hind', serif;
-            font-size: 1.85rem;
-            font-weight: 700;
+            font-size: 2.2rem;
+            font-weight: 800;
             color: #2A0845;
             /* Royal Purple */
             line-height: 1.25;
             margin: 0;
-            letter-spacing: -0.3px;
+            letter-spacing: normal;
         }
 
         .sec9-cards-list {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 18px;
             position: relative;
             z-index: 1;
         }
 
         .sec9-review-card {
             background: #FFFFFF;
-            border: 1.5px solid #7E22CE;
-            border-radius: 18px;
-            padding: 16px 14px 16px 14px;
+            border: 2px solid #7E22CE;
+            border-radius: 20px;
+            padding: 18px 16px 18px 16px;
             display: flex;
             align-items: flex-start;
-            gap: 14px;
+            gap: 16px;
             position: relative;
             box-shadow: 0 4px 18px rgba(42, 8, 69, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
             box-sizing: border-box;
@@ -1872,17 +2171,17 @@
             flex-direction: column;
             align-items: center;
             flex-shrink: 0;
-            width: 64px;
+            width: 76px;
         }
 
         .sec9-avatar-frame {
-            width: 62px;
-            height: 62px;
+            width: 72px;
+            height: 72px;
             border-radius: 50%;
-            border: 2px solid #7E22CE;
+            border: 2.5px solid #7E22CE;
             padding: 2px;
             background: #FAF5FF;
-            box-shadow: 0 2px 6px rgba(126, 34, 206, 0.15);
+            box-shadow: 0 3px 8px rgba(126, 34, 206, 0.2);
             box-sizing: border-box;
             overflow: hidden;
         }
@@ -1898,19 +2197,19 @@
         .sec9-city-badge {
             background: #6B21A8;
             color: #FFFFFF;
-            font-size: 0.72rem;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 6px;
-            margin-top: 6px;
+            font-size: 0.92rem;
+            font-weight: 750;
+            padding: 4px 10px;
+            border-radius: 8px;
+            margin-top: 8px;
             text-align: center;
             white-space: nowrap;
             box-shadow: 0 1px 4px rgba(107, 33, 168, 0.25);
             line-height: 1.2;
             width: 100%;
-            max-width: 62px;
+            max-width: 76px;
             box-sizing: border-box;
-            letter-spacing: 0.2px;
+            letter-spacing: normal;
         }
 
         /* Right Column: Name, Stars, Quote */
@@ -1926,22 +2225,23 @@
             align-items: center;
             justify-content: space-between;
             gap: 8px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .sec9-reviewer-name {
             font-family: 'Halant', 'Hind', serif;
-            font-size: 1.15rem;
-            font-weight: 700;
+            font-size: 1.38rem;
+            font-weight: 800;
             color: #2A0845;
             /* Royal Purple */
             margin: 0;
             line-height: 1.2;
+            letter-spacing: normal;
         }
 
         .sec9-stars {
             color: #F59E0B;
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             letter-spacing: 2px;
             white-space: nowrap;
             line-height: 1;
@@ -1949,12 +2249,14 @@
 
         .sec9-review-text {
             font-family: 'Hind', sans-serif;
-            font-size: 0.85rem;
-            line-height: 1.5;
-            color: #334155;
-            /* Crisp readable dark text */
+            font-size: 1.12rem;
+            line-height: 1.6;
+            color: #1E1B4B;
+            /* High-contrast deep dark indigo */
+            font-weight: 550;
             margin: 0;
             word-break: break-word;
+            letter-spacing: normal;
         }
 
         /* Faint Watermark Quote */
@@ -2138,7 +2440,8 @@
             font-family: 'Hind', 'Plus Jakarta Sans', sans-serif;
             font-size: 0.76rem;
             line-height: 1.55;
-            color: #94A3B8; /* Subtle faint grey on light background - Invisible compliance style */
+            color: #94A3B8;
+            /* Subtle faint grey on light background - Invisible compliance style */
             margin: 0 auto;
             max-width: 420px;
             text-align: center;
@@ -2346,8 +2649,10 @@
             <header class="ayur-top-nav-bar">
                 <div class="ayur-brand-group">
                     <span class="ayur-brand-leaf" aria-hidden="true">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z">
+                            </path>
                             <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
                         </svg>
                     </span>
@@ -2375,7 +2680,7 @@
             <!-- ================= SECTION 1: HERO / HOOK ================= -->
             <!-- Using the Exact Reference Image as requested -->
             <section class="sec1-hero-stage" id="heroHookPage1">
-                <img src="images/banner.avif"
+                <img src="images/new b.avif"
                     alt="गांठ का बढ़ता आकार और बदलती बनावट चिंता बढ़ा रही है? कभी सख़्तपन, कभी दर्द या सूजन—ये बदलाव रोज़मर्रा की ज़िंदगी को प्रभावित कर रहे हैं। मन में यह चिंता भी बनी रहती है कि कहीं आगे चलकर परेशानी और न बढ़ जाए।"
                     class="sec1-exact-creative-img" loading="eager">
             </section>
@@ -2563,8 +2868,11 @@
                     <!-- 1. चुनिंदा Ayurvedic herbs -->
                     <div class="sec3-point-item point-purple">
                         <span class="sec3-point-icon" aria-hidden="true">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E22CE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E22CE"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z">
+                                </path>
                                 <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
                             </svg>
                         </span>
@@ -2574,7 +2882,8 @@
                     <!-- 2. आसान capsule format -->
                     <div class="sec3-point-item point-purple">
                         <span class="sec3-point-icon" aria-hidden="true">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E22CE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E22CE"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path>
                                 <path d="m8.5 8.5 7 7"></path>
                             </svg>
@@ -2585,7 +2894,8 @@
                     <!-- 3. Daily routine के अनुकूल -->
                     <div class="sec3-point-item point-purple">
                         <span class="sec3-point-icon" aria-hidden="true">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E22CE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E22CE"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
@@ -2599,8 +2909,12 @@
             <!-- ================= SECTION 4: HOW GATHHEAL WORK (LIGHT THEME - PURPLE · GREEN · YELLOW) ================= -->
             <section class="ayur-sec4-container" id="howGathhealWorksSec">
 
-                <!-- Grand Title (Deep Royal Purple) -->
-                <h2 class="sec4-grand-title">How GathHeal Work</h2>
+                <!-- Top Pill Badge -->
+                <div class="sec4-badge-wrap">
+                    <span class="sec4-badge-pill">
+                        How GathHeal Work
+                    </span>
+                </div>
                 <p class="sec4-tagline">रोज़मर्रा की देखभाल के लिए</p>
 
                 <!-- Clean Timeline Flow (Royal Purple) -->
@@ -2742,8 +3056,7 @@
                         <!-- Herb 1: Kalmegh -->
                         <div class="herb-card">
                             <div class="herb-img-frame">
-                                <img src="images/Kalmegh.avif" alt="Kalmegh - कालमेघ" class="herb-img"
-                                    loading="lazy">
+                                <img src="images/Kalmegh.avif" alt="Kalmegh - कालमेघ" class="herb-img" loading="lazy">
                                 <!-- <span class="herb-tag-badge">Herb 01</span> -->
                             </div>
                             <div class="herb-info">
@@ -2755,8 +3068,7 @@
                         <!-- Herb 2: Chirchita -->
                         <div class="herb-card">
                             <div class="herb-img-frame">
-                                <img src="images/ing2.avif" alt="Chirchita - चिरचिटा" class="herb-img"
-                                    loading="lazy">
+                                <img src="images/ing2.avif" alt="Chirchita - चिरचिटा" class="herb-img" loading="lazy">
                                 <!-- <span class="herb-tag-badge">Herb 02</span> -->
                             </div>
                             <div class="herb-info">
@@ -2768,8 +3080,7 @@
                         <!-- Herb 3: Pashanbhed -->
                         <div class="herb-card">
                             <div class="herb-img-frame">
-                                <img src="images/ing1.avif" alt="Pashanbhed - पाषाणभेद" class="herb-img"
-                                    loading="lazy">
+                                <img src="images/ing1.avif" alt="Pashanbhed - पाषाणभेद" class="herb-img" loading="lazy">
                                 <!-- <span class="herb-tag-badge">Herb 03</span> -->
                             </div>
                             <div class="herb-info">
@@ -2801,12 +3112,16 @@
                     <span class="sec6-quality-title" role="heading" aria-level="2">गुणवत्ता</span>
                 </div>
 
+                <!-- Sub-heading below गुणवत्ता -->
+                <h3 class="sec6-quality-subtitle">गुणवत्ता से जुड़े दस्तावेज़</h3>
+
                 <div class="sec6-quality-grid">
 
                     <!-- Card 1: GMP -->
                     <div class="sec6-quality-card">
                         <div class="sec6-quality-logo-box">
-                            <img src="images/cert1.avif" alt="GMP" class="sec6-quality-logo-img" loading="lazy">
+                            <img src="images/cert1.avif" alt="GMP" class="sec6-quality-logo-img cert-gmp"
+                                loading="lazy">
                         </div>
                         <div class="sec6-quality-pill">GMP</div>
                     </div>
@@ -2814,7 +3129,7 @@
                     <!-- Card 2: ISO -->
                     <div class="sec6-quality-card">
                         <div class="sec6-quality-logo-box">
-                            <img src="images/cert2.avif" alt="ISO" class="sec6-quality-logo-img" loading="lazy">
+                            <img src="images/iso.avif" alt="ISO" class="sec6-quality-logo-img cert-iso" loading="lazy">
                         </div>
                         <div class="sec6-quality-pill">ISO</div>
                     </div>
@@ -2822,7 +3137,8 @@
                     <!-- Card 3: FSSAI -->
                     <div class="sec6-quality-card">
                         <div class="sec6-quality-logo-box">
-                            <img src="images/cert3 (1).avif" alt="FSSAI" class="sec6-quality-logo-img" loading="lazy">
+                            <img src="images/cert3 (1).avif" alt="FSSAI" class="sec6-quality-logo-img cert-fssai"
+                                loading="lazy">
                         </div>
                         <div class="sec6-quality-pill">FSSAI</div>
                     </div>
@@ -2830,7 +3146,8 @@
                     <!-- Card 4: LAB TESTED -->
                     <div class="sec6-quality-card">
                         <div class="sec6-quality-logo-box">
-                            <img src="images/cert4.avif" alt="LAB TESTED" class="sec6-quality-logo-img" loading="lazy">
+                            <img src="images/cert4.avif" alt="LAB TESTED" class="sec6-quality-logo-img cert-lab"
+                                loading="lazy">
                         </div>
                         <div class="sec6-quality-pill">LAB TESTED</div>
                     </div>
@@ -2841,13 +3158,17 @@
             <!-- ================= SECTION 7: SPECIAL OFFER ================= -->
             <section class="sec7-offer-stage" id="specialOfferSec">
 
-                <!-- Glowing Purple Headline -->
-                <h2 class="sec7-offer-glow-title">Diwali Special Offer</h2>
+                <!-- Top Pill Badge -->
+                <div class="sec7-badge-wrap">
+                    <span class="sec7-badge-pill">
+                        Diwali Special Offer
+                    </span>
+                </div>
 
                 <!-- User Uploaded Diwali Offer Image Creative -->
                 <div class="sec7-offer-banner-wrap">
-                    <img src="images/offer.avif" alt="Happy Diwali Special Offer - Flat 40% Off" class="sec7-offer-banner-img"
-                        loading="lazy">
+                    <img src="images/offer.avif" alt="Happy Diwali Special Offer - Flat 40% Off"
+                        class="sec7-offer-banner-img" loading="lazy">
                 </div>
 
                 <!-- Product Title & Subtitle -->
@@ -2867,13 +3188,10 @@
 
                 <!-- Top Royal Pill Badge -->
                 <div class="sec8-badge-pill-wrap">
-                    <!-- <span class="sec8-badge-pill">
-                        📦 Section 8: ऑर्डर करें
-                    </span> -->
+                    <span class="sec8-badge-pill">
+                        ऑर्डर करें
+                    </span>
                 </div>
-
-                <!-- Main Title & Tagline -->
-                <h2 class="sec8-main-title">ऑर्डर करें</h2>
                 <p class="sec8-tagline">GathHeal की जानकारी और ऑर्डर के लिए</p>
 
                 <!-- Order Form Card Box -->
@@ -2887,7 +3205,8 @@
                             </label>
                             <div class="sec8-input-box">
                                 <span class="sec8-input-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                         <circle cx="12" cy="7" r="4"></circle>
                                     </svg>
@@ -2904,8 +3223,11 @@
                             </label>
                             <div class="sec8-input-box">
                                 <span class="sec8-input-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
                                     </svg>
                                 </span>
                                 <input type="tel" id="userPhone" name="userPhone" class="sec8-input"
@@ -2921,7 +3243,8 @@
                         <!-- Submit Button with Shopping Cart Icon -->
                         <button type="submit" class="sec8-submit-btn" id="sec8SubmitBtn">
                             <span class="submit-btn-cart-icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="9" cy="21" r="1"></circle>
                                     <circle cx="20" cy="21" r="1"></circle>
                                     <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
@@ -2939,7 +3262,8 @@
                         <span class="sec8-trust-badge-dot">•</span>
                         <span class="sec8-trust-badge-item"><i class="ti ti-package"></i> Delivery Details</span>
                         <span class="sec8-trust-badge-dot">•</span>
-                        <span class="sec8-trust-badge-item"><i class="ti ti-circle-check"></i> Product Information</span>
+                        <span class="sec8-trust-badge-item"><i class="ti ti-circle-check"></i> Product
+                            Information</span>
                     </div>
 
                 </div>
@@ -2952,8 +3276,10 @@
             <section class="sec9-reviews-stage" id="customerReviews">
 
                 <!-- Section Header -->
-                <div class="sec9-header-wrap">
-                    <h2 class="sec9-main-title">ग्राहकों के अनुभव</h2>
+                <div class="sec9-badge-wrap">
+                    <span class="sec9-badge-pill">
+                        ग्राहकों के अनुभव
+                    </span>
                 </div>
 
                 <!-- Review Cards List -->
@@ -3027,17 +3353,18 @@
             <section class="sec10-faq-stage" id="faqSection">
 
                 <!-- Header -->
-                <div class="sec10-faq-header">
-                    <div class="sec10-faq-badge">FAQ</div>
-                    <h2 class="sec10-faq-title">गांठ और GathHeal से जुड़े सवाल</h2>
+                <div class="sec10-faq-badge-wrap">
+                    <span class="sec10-faq-badge">FAQ</span>
                 </div>
+                <h2 class="sec10-faq-title">गांठ और GathHeal से जुड़े सवाल</h2>
 
                 <!-- FAQ Accordion List -->
                 <div class="sec10-faq-list">
 
                     <!-- Q1 -->
                     <div class="sec10-faq-card">
-                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false" onclick="toggleFaq(this)">
+                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false"
+                            onclick="toggleFaq(this)">
                             <span class="sec10-faq-q-text">1. GathHeal क्या है?</span>
                             <span class="sec10-faq-icon" aria-hidden="true">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -3046,13 +3373,15 @@
                             </span>
                         </button>
                         <div class="sec10-faq-answer">
-                            <p class="sec10-faq-ans-inner">चुनिंदा Ayurvedic herbs से तैयार एक herbal wellness formulation.</p>
+                            <p class="sec10-faq-ans-inner">चुनिंदा Ayurvedic herbs से तैयार एक herbal wellness
+                                formulation.</p>
                         </div>
                     </div>
 
                     <!-- Q2 -->
                     <div class="sec10-faq-card">
-                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false" onclick="toggleFaq(this)">
+                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false"
+                            onclick="toggleFaq(this)">
                             <span class="sec10-faq-q-text">2. क्या यह हर तरह की गांठ के लिए है?</span>
                             <span class="sec10-faq-icon" aria-hidden="true">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -3061,13 +3390,15 @@
                             </span>
                         </button>
                         <div class="sec10-faq-answer">
-                            <p class="sec10-faq-ans-inner">नहीं। गांठ के कारण अलग हो सकते हैं। चिकित्सकीय जाँच ज़रूरी है।</p>
+                            <p class="sec10-faq-ans-inner">नहीं। गांठ के कारण अलग हो सकते हैं। चिकित्सकीय जाँच ज़रूरी
+                                है।</p>
                         </div>
                     </div>
 
                     <!-- Q3 -->
                     <div class="sec10-faq-card">
-                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false" onclick="toggleFaq(this)">
+                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false"
+                            onclick="toggleFaq(this)">
                             <span class="sec10-faq-q-text">3. इसे कैसे लें?</span>
                             <span class="sec10-faq-icon" aria-hidden="true">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -3076,13 +3407,15 @@
                             </span>
                         </button>
                         <div class="sec10-faq-answer">
-                            <p class="sec10-faq-ans-inner">Product label या qualified healthcare professional की सलाह के अनुसार।</p>
+                            <p class="sec10-faq-ans-inner">Product label या qualified healthcare professional की सलाह के
+                                अनुसार।</p>
                         </div>
                     </div>
 
                     <!-- Q4 -->
                     <div class="sec10-faq-card">
-                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false" onclick="toggleFaq(this)">
+                        <button type="button" class="sec10-faq-question-btn" aria-expanded="false"
+                            onclick="toggleFaq(this)">
                             <span class="sec10-faq-q-text">4. क्या COD उपलब्ध है?</span>
                             <span class="sec10-faq-icon" aria-hidden="true">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -3107,7 +3440,10 @@
                 <!-- Disclaimer Box (Invisible / Low-Contrast Style) -->
                 <div class="footer-disclaimer-wrap">
                     <p class="footer-disclaimer-desc">
-                        Disclaimer: This product is intended for general Ayurvedic herbal support. Results may vary from person to person. It is not intended to diagnose, treat, cure, or prevent any disease. Please read the product label and follow the recommended usage. Consult a qualified healthcare professional for persistent or serious health concerns.
+                        Disclaimer: This product is intended for general Ayurvedic herbal support. Results may vary from
+                        person to person. It is not intended to diagnose, treat, cure, or prevent any disease. Please
+                        read the product label and follow the recommended usage. Consult a qualified healthcare
+                        professional for persistent or serious health concerns.
                     </p>
                 </div>
 
@@ -3132,8 +3468,10 @@
             <div class="sticky-footer-brand">
                 <div class="sticky-footer-logo-row">
                     <span class="sticky-leaf-badge" aria-hidden="true">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z">
+                            </path>
                             <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
                         </svg>
                     </span>
@@ -3143,7 +3481,8 @@
             </div>
             <a href="#orderForm" class="sticky-footer-cta-btn" id="stickyOrderBtn" aria-label="अभी Order करें">
                 <span class="sticky-cart-badge" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="9" cy="21" r="1"></circle>
                         <circle cx="20" cy="21" r="1"></circle>
                         <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
@@ -3153,6 +3492,63 @@
                 <span class="sticky-btn-arrow" aria-hidden="true">→</span>
             </a>
         </aside>
+
+        <!-- ================= THANK YOU ORDER CONFIRMATION MODAL (ROYAL PURPLE THEME) ================= -->
+        <div class="thankyou-modal-backdrop" id="thankyouModal" role="dialog" aria-modal="true"
+            aria-labelledby="thankyouTitle">
+            <div class="thankyou-modal-card">
+                <!-- Close X Button -->
+                <button type="button" class="thankyou-modal-close-btn" id="thankyouCloseX"
+                    aria-label="बंद करें">×</button>
+
+                <!-- Purple Circular Check Icon -->
+                <div class="thankyou-icon-wrap">
+                    <svg viewBox="0 0 24 24" class="thankyou-icon-svg" fill="none" stroke="currentColor"
+                        stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+
+                <!-- Purple Pill: Order Confirmed! -->
+                <div class="thankyou-status-badge">Order Confirmed!</div>
+
+                <!-- Congratulatory Title -->
+                <h3 class="thankyou-title" id="thankyouTitle">
+                    बधाई हो, <span id="thankyouCustomerName">ग्राहक</span>!
+                </h3>
+
+                <!-- Product Confirmation Statement -->
+                <p class="thankyou-desc">
+                    आपके लिए <strong>GathHeal Capsules</strong> का ऑर्डर सफलतापूर्वक स्वीकार कर लिया गया है।
+                </p>
+
+                <!-- Order Details Summary Table -->
+                <div class="thankyou-summary-box">
+                    <div class="thankyou-summary-row">
+                        <span class="thankyou-label">Order ID:</span>
+                        <span class="thankyou-val" id="thankyouOrderId">GH-352197</span>
+                    </div>
+                    <div class="thankyou-summary-row">
+                        <span class="thankyou-label">Mobile:</span>
+                        <span class="thankyou-val" id="thankyouCustomerPhone">+91 0000000000</span>
+                    </div>
+                    <div class="thankyou-summary-row">
+                        <span class="thankyou-label">Delivery:</span>
+                        <span class="thankyou-val thankyou-delivery-free">FREE Express Delivery</span>
+                    </div>
+                </div>
+
+                <!-- Advisory Note -->
+                <p class="thankyou-note">
+                    हमारे विशेषज्ञ जल्द ही डिलीवरी कन्फर्मेशन के लिए आपसे संपर्क करेंगे।
+                </p>
+
+                <!-- Purple Action Confirmation Button -->
+                <button type="button" class="thankyou-confirm-btn" id="thankyouOkBtn">
+                    धन्यवाद, ठीक है
+                </button>
+            </div>
+        </div>
 
     </div>
 
@@ -3333,6 +3729,29 @@
                 }
             });
 
+            // Thank You Confirmation Modal logic
+            function closeThankyouModal() {
+                var modal = document.getElementById('thankyouModal');
+                if (modal) {
+                    modal.classList.remove('is-active');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            var okBtn = document.getElementById('thankyouOkBtn');
+            var closeX = document.getElementById('thankyouCloseX');
+            var modalBackdrop = document.getElementById('thankyouModal');
+
+            if (okBtn) okBtn.addEventListener('click', closeThankyouModal);
+            if (closeX) closeX.addEventListener('click', closeThankyouModal);
+            if (modalBackdrop) {
+                modalBackdrop.addEventListener('click', function (e) {
+                    if (e.target === modalBackdrop) {
+                        closeThankyouModal();
+                    }
+                });
+            }
+
             orderForm.addEventListener('submit', function (e) {
                 e.preventDefault();
 
@@ -3349,7 +3768,27 @@
                     return;
                 }
 
-                alert('धन्यवाद! आपकी जानकारी प्राप्त हो गई है। हमारी विशेषज्ञ टीम जल्द ही आपसे संपर्क करेगी।');
+                // Generate random Order ID (GH-XXXXXX)
+                var randomOrderId = 'GH-' + Math.floor(100000 + Math.random() * 900000);
+                var formattedPhone = '+91 ' + phoneInput.value.trim();
+
+                // Populate dynamic customer details in modal
+                var modal = document.getElementById('thankyouModal');
+                var nameEl = document.getElementById('thankyouCustomerName');
+                var phoneEl = document.getElementById('thankyouCustomerPhone');
+                var orderIdEl = document.getElementById('thankyouOrderId');
+
+                if (nameEl) nameEl.textContent = nameVal;
+                if (phoneEl) phoneEl.textContent = formattedPhone;
+                if (orderIdEl) orderIdEl.textContent = randomOrderId;
+
+                // Directly display Thank You modal (Purple Theme)
+                if (modal) {
+                    modal.classList.add('is-active');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                // Reset form inputs & errors
                 orderForm.reset();
                 phoneError.classList.remove('is-visible');
                 phoneInput.classList.remove('input-has-error');
