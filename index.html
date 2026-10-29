@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 
     <!-- Custom Modern Design Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=2026.30">
+    <link rel="stylesheet" href="styles.css?v=2026.35">
 
     <style>
         /* ==========================================================================
@@ -63,6 +63,8 @@
             padding: 0;
             background: #FFFFFF !important;
             font-family: 'Plus Jakarta Sans', 'Hind', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
             color: #2A0845 !important;
@@ -251,31 +253,311 @@
         }
 
         /* ==========================================================================
-           SECTION 1: HERO / HOOK (EXACT USER CREATIVE IMAGE WITH ROYAL ACCENTS)
+           SECTION 1: HERO / HOOK (IMAGE 2 & 3 ARCHITECTURAL SHOWCASE)
+           PURE ROYAL PURPLE PALETTE · ZERO EXTRA WORDS · CLEAR TEXT & PROBLEM
+           ========================================================================== */
+        /* ==========================================================================
+           SECTION 1: HERO / HOOK (PURE WHITE & ROYAL PURPLE THEME · NO BOXES)
+           MATCHING ENTIRE PAGE DESIGN SYSTEM (SECTION 2 COLOR HARMONY)
            ========================================================================== */
         .sec1-hero-stage {
             width: 100%;
             position: relative;
             background: #FFFFFF;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(42, 8, 69, 0.08);
+            padding: 24px 16px 20px;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(126, 34, 206, 0.12);
         }
 
-        .sec1-exact-creative-img {
-            width: 100%;
-            height: auto;
+        .sec1-hero-stage::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.10) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .sec1-hero-stage::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: -20px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(126, 34, 206, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* 1. Top Headline: Seamless on Pure White Canvas (Balanced Compact Spacing) */
+        .hero-top-headline-card {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 4px 4px !important;
+            text-align: center;
+            margin-bottom: 4px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .headline-ornament {
+            display: none !important;
+        }
+
+        .hero-main-title {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0px !important;
+        }
+
+        .title-sub-prefix {
+            font-family: 'Hind', sans-serif;
+            font-size: 1.55rem !important;
+            font-weight: 750;
+            color: #2A0845 !important;
+            -webkit-text-fill-color: #2A0845 !important;
             display: block;
-            object-fit: cover;
-            user-select: none;
-            -webkit-user-drag: none;
-            transition: transform 0.3s ease;
+            line-height: 1.25 !important;
+            margin: 0 0 -1px 0 !important;
         }
 
-        /* Transition Ribbon (Connecting Section 1 to Section 2) */
-        .sec1-to-sec2-ribbon {
-            height: 6px;
-            background: linear-gradient(90deg, #7E22CE 0%, #16A34A 50%, #EAB308 100%);
-            box-shadow: 0 2px 8px rgba(126, 34, 206, 0.35);
+        .title-gath-bold {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 2.15rem !important;
+            font-weight: 900 !important;
+            color: #7E22CE !important;
+            -webkit-text-fill-color: #7E22CE !important;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 3px !important;
+            margin-right: 3px;
+            display: inline;
+            vertical-align: baseline;
+        }
+
+        .title-highlight {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 2.85rem !important;
+            font-weight: 900 !important;
+            color: #6B21A8 !important;
+            -webkit-text-fill-color: #6B21A8 !important;
+            background: none !important;
+            display: block;
+            line-height: 1.15 !important;
+            letter-spacing: -0.3px;
+            margin: 0 !important;
+            padding-top: 3px !important;
+            padding-bottom: 1px !important;
+        }
+
+        .title-question {
+            font-family: 'Hind', sans-serif;
+            font-size: 1.65rem !important;
+            font-weight: 850 !important;
+            color: #2A0845 !important;
+            -webkit-text-fill-color: #2A0845 !important;
+            display: block;
+            line-height: 1.25 !important;
+            margin: 1px 0 0 0 !important;
+        }
+
+        /* 2. Middle Split Showcase: Continuous Visual (NO Heavy Boxes) */
+        .hero-showcase-split {
+            display: flex;
+            gap: 12px;
+            align-items: stretch;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Left: Patient Lady (Bigger Image · 100% NO BOX) */
+        .hero-patient-showcase-col {
+            width: 52%;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .patient-frame-wrap {
+            flex: 1;
+            min-height: 355px;
+            background: transparent !important;
+            border-radius: 14px;
+            overflow: hidden;
+            border: none !important;
+            box-shadow: none !important;
+            position: relative;
+        }
+
+        .patient-showcase-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 14px;
+            border: none !important;
+            box-shadow: none !important;
+            display: block;
+        }
+
+        /* Right: 3 Clean Symptom Rows (Bigger Text & Thumbnails) */
+        .hero-cards-showcase-col {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .image2-symptom-card {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: transparent !important;
+            border: none !important;
+            border-radius: 0 !important;
+            padding: 4px 0 !important;
+            box-sizing: border-box;
+            box-shadow: none !important;
+            transition: transform 0.2s ease;
+        }
+
+        .image2-symptom-card:hover {
+            transform: translateX(3px);
+        }
+
+        .symptom-card-thumb {
+            width: 76px;
+            height: 76px;
+            min-width: 76px;
+            border-radius: 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: none !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            transition: transform 0.2s ease;
+        }
+
+        .image2-symptom-card:hover .symptom-card-thumb {
+            transform: scale(1.05);
+        }
+
+        .card-thumb-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .symptom-card-badge {
+            display: none !important;
+        }
+
+        .symptom-card-label {
+            font-family: 'Halant', 'Hind', serif;
+            font-size: 1.55rem !important;
+            font-weight: 850 !important;
+            color: #2A0845 !important;
+            -webkit-text-fill-color: #2A0845 !important;
+            line-height: 1.25;
+            flex: 1;
+            text-align: left;
+        }
+
+        /* 3. Bottom Summary Note (Clean Natural Text · NO Box · NO Header Badge) */
+        .hero-bottom-summary-card {
+            background: transparent !important;
+            border: none !important;
+            border-left: none !important;
+            border-radius: 0 !important;
+            padding: 8px 4px 0 !important;
+            box-shadow: none !important;
+            position: relative;
+            z-index: 2;
+            margin-top: 8px;
+            text-align: center !important;
+        }
+
+        .summary-card-header,
+        .summary-callout-pill {
+            display: none !important;
+        }
+
+        .hero-summary-paragraph {
+            font-family: 'Hind', sans-serif;
+            font-size: 1.35rem !important;
+            font-weight: 650 !important;
+            color: #2A0845 !important;
+            -webkit-text-fill-color: #2A0845 !important;
+            line-height: 1.55 !important;
+            margin: 0 auto;
+            text-align: center !important;
+        }
+
+        .summary-hl-primary {
+            color: #7E22CE !important;
+            -webkit-text-fill-color: #7E22CE !important;
+            font-weight: 850 !important;
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        .summary-hl-accent {
+            color: #7E22CE !important;
+            -webkit-text-fill-color: #7E22CE !important;
+            font-weight: 850 !important;
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        @media (max-width: 380px) {
+            .title-sub-prefix {
+                font-size: 1.30rem !important;
+                line-height: 1.22 !important;
+            }
+            .title-gath-bold {
+                font-size: 1.85rem !important;
+            }
+            .title-highlight {
+                font-size: 2.40rem !important;
+                line-height: 1.15 !important;
+                padding-top: 2px !important;
+            }
+            .title-question {
+                font-size: 1.45rem !important;
+                line-height: 1.22 !important;
+            }
+            .patient-frame-wrap {
+                min-height: 310px !important;
+            }
+            .symptom-card-thumb {
+                width: 60px !important;
+                height: 60px !important;
+                min-width: 60px !important;
+            }
+            .symptom-card-label {
+                font-size: 1.30rem !important;
+            }
+            .hero-bottom-summary-card {
+                padding: 6px 2px 0 !important;
+            }
+            .hero-summary-paragraph {
+                font-size: 1.20rem !important;
+                line-height: 1.50 !important;
+            }
         }
 
         /* ==========================================================================
@@ -369,8 +651,8 @@
         /* Section 2 Title */
         .sec2-main-title {
             font-family: 'Halant', 'Hind', serif;
-            font-size: 1.65rem;
-            font-weight: 800;
+            font-size: 1.85rem;
+            font-weight: 850;
             color: #2A0845;
             text-align: center;
             line-height: 1.30;
@@ -423,167 +705,122 @@
         }
 
         /* ==========================================================================
-           5 PROBLEM CARDS (PURPLE · YELLOW · GREEN STYLING)
+           SECTION 2: ALTERNATING ZIG-ZAG PROBLEM CARDS (IMAGE 1 REFERENCE DESIGN)
+           ========================================================================== */
+        /* ==========================================================================
+           SECTION 2: ALTERNATING ZIG-ZAG PROBLEM CARDS (PURE ROYAL PURPLE THEME)
            ========================================================================== */
         .sec2-cards-deck {
             display: flex;
             flex-direction: column;
-            gap: 18px;
-            margin-bottom: 26px;
+            gap: 26px;
+            margin: 26px 0 32px;
         }
 
-        .problem-card {
-            border-radius: 20px;
-            overflow: hidden;
-            background: #FFFFFF;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-        }
-
-        .problem-card:hover {
-            transform: translateY(-3px);
-        }
-
-        /* 1. Purple Scheme */
-        .card-theme-purple,
-        .card-theme-yellow,
-        .card-theme-green {
-            border: 1.5px solid #C084FC;
-            box-shadow: 0 8px 24px rgba(88, 28, 135, 0.08);
-        }
-
-        .card-theme-purple .card-tag-pill,
-        .card-theme-yellow .card-tag-pill,
-        .card-theme-green .card-tag-pill {
-            background: #F3E8FF;
-            color: #6B21A8;
-            border: 1px solid #D8B4FE;
-        }
-
-        .card-theme-purple .card-header-icon,
-        .card-theme-yellow .card-header-icon,
-        .card-theme-green .card-header-icon {
-            background: #FAF5FF;
-            color: #7E22CE;
-            border: 1px solid #D8B4FE;
-        }
-
-        .card-theme-purple:hover,
-        .card-theme-yellow:hover,
-        .card-theme-green:hover {
-            border-color: #9333EA;
-            box-shadow: 0 12px 28px rgba(126, 34, 206, 0.16);
-        }
-
-        /* Image Display in Cards */
-        .card-media-box {
-            width: 100%;
-            height: 195px;
-            position: relative;
-            background: #FAF5FF;
-            overflow: hidden;
-        }
-
-        .card-theme-purple .card-media-box,
-        .card-theme-yellow .card-media-box,
-        .card-theme-green .card-media-box {
-            background: #FAF5FF;
-        }
-
-        .card-real-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-        .problem-card:hover .card-real-img {
-            transform: scale(1.04);
-        }
-
-        .card-media-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 48px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, transparent 100%);
-            pointer-events: none;
-        }
-
-        .card-float-badge {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 0.74rem;
-            font-weight: 800;
-            padding: 4px 10px;
-            border-radius: 999px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22);
-            backdrop-filter: blur(8px);
-        }
-
-        /* Card Body */
-        .card-body-content {
-            padding: 16px 18px 18px;
-        }
-
-        .card-top-row {
+        .symptom-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 8px;
+            gap: 16px;
+            width: 100%;
         }
 
-        .card-tag-pill {
-            font-size: 0.76rem;
-            font-weight: 800;
-            padding: 3px 10px;
-            border-radius: 999px;
-            letter-spacing: 0.4px;
+        .symptom-row.row-reverse {
+            flex-direction: row-reverse;
         }
 
-        .card-header-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+        /* Image Column with Dashed Frame & Overlapping Number Badge */
+        .symptom-media-frame {
+            position: relative;
+            flex: 0 0 165px;
+            width: 165px;
+            max-width: 48%;
+        }
+
+        @media (max-width: 380px) {
+            .symptom-media-frame {
+                flex: 0 0 142px;
+                width: 142px;
+                max-width: 46%;
+            }
+        }
+
+        .symptom-dashed-box {
+            padding: 9px;
+            border-radius: 26px;
+            background: #FFFFFF;
+            border: 2px dashed rgba(147, 51, 234, 0.45);
+            box-shadow: 0 6px 20px rgba(126, 34, 206, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .symptom-row:hover .symptom-dashed-box {
+            transform: scale(1.03);
+            border-color: #9333EA;
+            box-shadow: 0 8px 24px rgba(126, 34, 206, 0.16);
+        }
+
+        /* Inner Image */
+        .symptom-img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            border-radius: 18px;
+            border: 2.5px solid #7E22CE;
+        }
+
+        /* Circular Number Badge (Removed as requested) */
+        .symptom-num-badge {
+            display: none !important;
+        }
+
+        /* Text Card Side (Pure Royal Purple Theme) */
+        .symptom-text-card {
+            flex: 1;
+            min-width: 0;
+            padding: 20px 18px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.05rem;
+            background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%);
+            border: 1px solid rgba(192, 132, 252, 0.35);
+            border-left: 6px solid #7E22CE;
+            box-shadow: 0 6px 22px rgba(126, 34, 206, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card-problem-title {
+        /* Reversed rows: card on left has right accent bar */
+        .symptom-row.row-reverse .symptom-text-card {
+            border-left: 1px solid rgba(192, 132, 252, 0.35);
+            border-right: 6px solid #7E22CE;
+        }
+
+        .symptom-row:hover .symptom-text-card {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(126, 34, 206, 0.14);
+        }
+
+        .symptom-title {
             font-family: 'Halant', 'Hind', serif;
-            font-size: 1.25rem;
-            font-weight: 700;
-            line-height: 1.35;
-            margin: 0 0 6px;
-            color: #2A0845 !important;
-        }
-
-        .card-theme-purple .card-problem-title,
-        .card-theme-yellow .card-problem-title,
-        .card-theme-green .card-problem-title {
-            color: #2A0845 !important;
-        }
-
-        .card-problem-desc {
-            font-size: 0.90rem;
-            color: #4C1D95 !important;
-            line-height: 1.55;
+            font-size: 1.48rem;
+            font-weight: 850;
+            line-height: 1.32;
             margin: 0;
+            letter-spacing: -0.2px;
+            color: #2A0845;
         }
 
-        .card-theme-purple .card-problem-desc,
-        .card-theme-yellow .card-problem-desc,
-        .card-theme-green .card-problem-desc {
-            color: #4C1D95 !important;
+        @media (max-width: 380px) {
+            .symptom-title {
+                font-size: 1.18rem;
+            }
+
+            .symptom-text-card {
+                padding: 16px 14px;
+            }
         }
 
         .sec2-title-accent {
@@ -755,7 +992,7 @@
         .sec3-tagline {
             font-size: 16px;
             font-weight: 700;
-            color: #15803D;
+            color: #2A0845;
             text-align: center;
             line-height: 1.4;
             margin: 0 0 16px;
@@ -878,32 +1115,33 @@
         }
 
         /* ==========================================================================
-           SECTION 5: INGREDIENTS SECTION (BELOW HOW GATHHEAL WORK)
+           SECTION 5: INGREDIENTS (IMAGE 2 DYNAMIC SLANTED SHOWCASE LAYOUT)
+           ========================================================================== */
+        /* ==========================================================================
+           SECTION 5: INGREDIENTS (PURE WHITE & ROYAL PURPLE THEME)
            ========================================================================== */
         .ayur-sec5-container {
             background: #FFFFFF;
-            padding: 24px 18px 42px;
+            padding: 34px 16px 36px;
             position: relative;
-            border-top: 1.5px solid rgba(126, 34, 206, 0.18);
-            text-align: center;
-        }
-
-        .ayur-sec5-container .sec3-ingredients-block {
-            margin-top: 0;
+            border-top: 1.5px solid rgba(126, 34, 206, 0.15);
         }
 
         .sec3-ingredients-block {
-            margin-top: 26px;
-            padding: 22px 14px 20px;
             background: #FFFFFF;
-            border: 1.5px solid #C084FC;
-            border-radius: 22px;
-            box-shadow: 0 8px 24px rgba(42, 8, 69, 0.08);
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
             text-align: center;
+            position: relative;
+            overflow: visible;
         }
 
         .ingredients-badge-wrap {
-            margin-bottom: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
         }
 
         .ingredients-pill-badge {
@@ -915,123 +1153,170 @@
             color: #FFFFFF !important;
             -webkit-text-fill-color: #FFFFFF !important;
             border: 2px solid #C084FC !important;
-            padding: 8px 30px !important;
             border-radius: 999px !important;
+            padding: 8px 32px !important;
             font-size: 1.25rem !important;
             font-weight: 750 !important;
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
-            letter-spacing: 0.3px !important;
+            font-family: 'Hind', 'Baloo 2', 'Plus Jakarta Sans', sans-serif !important;
             box-shadow: 0 4px 16px rgba(76, 29, 149, 0.35) !important;
             line-height: 1.2 !important;
-            text-shadow: none !important;
-        }
-
-        .ingredients-pill-badge i,
-        .ingredients-pill-badge svg {
-            font-size: 1.25rem !important;
-            stroke-width: 2.2 !important;
         }
 
         .ingredients-heading {
-            font-family: 'Halant', 'Hind', serif;
-            font-size: 1.55rem;
-            font-weight: 800;
-            color: #2A0845;
-            margin: 4px 0 4px;
-            line-height: 1.25;
-            letter-spacing: -0.2px;
+            font-family: 'Halant', 'Hind', serif !important;
+            font-size: 1.95rem !important;
+            font-weight: 850 !important;
+            color: #2A0845 !important;
+            -webkit-text-fill-color: #2A0845 !important;
+            margin: 0 0 20px !important;
+            line-height: 1.28 !important;
+            letter-spacing: -0.2px !important;
+            text-shadow: none !important;
         }
 
-        .ingredients-sub-tagline {
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: #7E22CE;
-            margin: 0 0 18px;
-            letter-spacing: 0.2px;
-            line-height: 1.4;
+        /* 2-Column Showcase Layout */
+        .herbs-slant-showcase {
+            display: flex;
+            align-items: stretch;
+            gap: 14px;
+            margin-top: 10px;
+            text-align: left;
         }
 
-        .ingredients-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .herb-card {
-            background: #FFFFFF;
-            border: 1.5px solid #E9D5FF;
-            border-radius: 18px;
-            overflow: hidden;
+        /* Left Column: 4 Interlocking Slanted Photo Frames */
+        .herbs-slant-photos-col {
+            width: 44%;
+            max-width: 175px;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 14px rgba(71, 40, 10, 0.06);
-            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            gap: 8px;
         }
 
-        .herb-card:hover {
-            transform: translateY(-3px);
-            border-color: #C084FC;
-            box-shadow: 0 10px 24px rgba(126, 34, 206, 0.16);
-        }
-
-        .herb-img-frame {
+        .herb-slant-frame {
             width: 100%;
-            height: 125px;
-            position: relative;
-            overflow: hidden;
+            height: 86px;
             background: #FFFFFF;
+            padding: 3.5px;
+            border-radius: 12px;
+            border: 1.5px solid #E9D5FF;
+            filter: drop-shadow(0 4px 12px rgba(126, 34, 206, 0.10));
+            box-sizing: border-box;
+            transition: transform 0.25s ease, border-color 0.25s ease;
         }
 
-        .herb-img {
+        .herb-slant-frame:hover {
+            transform: scale(1.03);
+            border-color: #7E22CE;
+        }
+
+        .herb-slant-frame.slant-1 {
+            clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+        }
+        .herb-slant-frame.slant-1 .herb-slant-img {
+            clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+        }
+
+        .herb-slant-frame.slant-2 {
+            clip-path: polygon(0 14%, 100% 0, 100% 86%, 0 100%);
+        }
+        .herb-slant-frame.slant-2 .herb-slant-img {
+            clip-path: polygon(0 14%, 100% 0, 100% 86%, 0 100%);
+        }
+
+        .herb-slant-frame.slant-3 {
+            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 86%);
+        }
+        .herb-slant-frame.slant-3 .herb-slant-img {
+            clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 86%);
+        }
+
+        .herb-slant-frame.slant-4 {
+            clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+        }
+        .herb-slant-frame.slant-4 .herb-slant-img {
+            clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .herb-slant-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
             display: block;
-            transition: transform 0.4s ease;
+            border-radius: 8px;
         }
 
-        .herb-card:hover .herb-img {
-            transform: scale(1.08);
+        /* Right Column: Product Names in matching light theme cards */
+        .herbs-slant-details-col {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 2px 0;
         }
 
-        .herb-tag-badge {
-            position: absolute;
-            top: 7px;
-            left: 7px;
-            background: rgba(42, 8, 69, 0.88);
-            color: #FEF08A;
-            font-size: 0.65rem;
-            font-weight: 800;
-            padding: 2px 7px;
-            border-radius: 999px;
-            backdrop-filter: blur(4px);
-            border: 1px solid #C084FC;
-            letter-spacing: 0.3px;
+        .herb-detail-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            height: 86px;
+            background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%);
+            border: 1px solid rgba(192, 132, 252, 0.35);
+            border-left: 5px solid #7E22CE;
+            border-radius: 14px;
+            padding: 0 16px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 14px rgba(126, 34, 206, 0.06);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .herb-info {
-            padding: 10px 8px 12px;
-            text-align: center;
-            background: #FAF5FF;
-            border-top: 1px solid #F3E8FF;
+        .herb-detail-row:hover {
+            transform: translateX(3px);
+            border-color: #7E22CE;
+            box-shadow: 0 6px 18px rgba(126, 34, 206, 0.12);
         }
 
-        .herb-name {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.96rem;
-            font-weight: 800;
-            color: #2A0845;
-            margin: 0 0 2px;
-            line-height: 1.2;
+        .herb-detail-icon {
+            font-size: 1.45rem;
+            color: #7E22CE !important;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .herb-hindi-name {
-            font-family: 'Hind', sans-serif;
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: #15803D;
-            display: block;
+        .herb-detail-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .herb-detail-title {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 1.35rem !important;
+            font-weight: 800 !important;
+            color: #2A0845 !important;
+            -webkit-text-fill-color: #2A0845 !important;
+            margin: 0 !important;
+            line-height: 1.2 !important;
+            letter-spacing: 0.2px !important;
+            text-shadow: none !important;
+        }
+
+        @media (max-width: 380px) {
+            .ingredients-heading {
+                font-size: 1.65rem !important;
+            }
+            .herbs-slant-photos-col {
+                max-width: 145px;
+            }
+            .herb-slant-frame,
+            .herb-detail-row {
+                height: 78px;
+            }
+            .herb-detail-title {
+                font-size: 1.15rem !important;
+            }
         }
 
         /* ==========================================================================
@@ -1068,13 +1353,14 @@
         .ayur-mobile-app .ayur-sec4-container .sec4-tagline,
         .ayur-sec4-container p.sec4-tagline,
         .sec4-tagline {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: #15803D !important;
-            text-align: center;
-            line-height: 1.4;
-            margin: 0 0 28px;
-            letter-spacing: 0.3px;
+            font-family: 'Halant', 'Hind', serif !important;
+            font-size: 1.65rem !important;
+            font-weight: 800 !important;
+            color: #2A0845 !important;
+            text-align: center !important;
+            line-height: 1.30 !important;
+            margin: 0 auto 20px !important;
+            letter-spacing: -0.3px !important;
         }
 
         /* Timeline Flow Wrapper */
@@ -1423,11 +1709,12 @@
 
         .sec6-quality-logo-box {
             width: 100%;
-            height: 172px;
+            height: 152px;
             max-width: 100%;
             background: #FFFFFF;
-            border-radius: 14px;
+            border-radius: 16px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            border: 1.5px solid rgba(126, 34, 206, 0.16);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1435,49 +1722,50 @@
             margin-bottom: 12px;
             box-sizing: border-box;
             overflow: hidden;
+            position: relative;
         }
 
         .sec6-quality-logo-img {
             width: 100%;
             height: 100%;
-            max-width: 155px;
-            max-height: 155px;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
             display: block;
+            margin: auto;
             transition: transform 0.25s ease;
         }
 
-        /* Optical balance: calibrating image scales so all 4 certificates look identical in size */
         .sec6-quality-logo-img.cert-gmp {
-            transform: scale(1.60);
-        }
-
-        .sec6-quality-card:hover .sec6-quality-logo-img.cert-gmp {
-            transform: scale(1.66);
+            transform: scale(1.58);
         }
 
         .sec6-quality-logo-img.cert-iso {
-            transform: scale(1.08);
-        }
-
-        .sec6-quality-card:hover .sec6-quality-logo-img.cert-iso {
-            transform: scale(1.14);
+            transform: scale(1.20);
         }
 
         .sec6-quality-logo-img.cert-fssai {
-            transform: scale(1.35);
-        }
-
-        .sec6-quality-card:hover .sec6-quality-logo-img.cert-fssai {
-            transform: scale(1.40);
+            transform: scale(1.42);
         }
 
         .sec6-quality-logo-img.cert-lab {
-            transform: scale(0.86);
+            transform: scale(1.22);
+        }
+
+        .sec6-quality-card:hover .sec6-quality-logo-img.cert-gmp {
+            transform: scale(1.64);
+        }
+
+        .sec6-quality-card:hover .sec6-quality-logo-img.cert-iso {
+            transform: scale(1.26);
+        }
+
+        .sec6-quality-card:hover .sec6-quality-logo-img.cert-fssai {
+            transform: scale(1.48);
         }
 
         .sec6-quality-card:hover .sec6-quality-logo-img.cert-lab {
-            transform: scale(0.91);
+            transform: scale(1.28);
         }
 
         .sec6-quality-pill {
@@ -2677,12 +2965,69 @@
                 </div>
             </div> -->
 
-            <!-- ================= SECTION 1: HERO / HOOK ================= -->
-            <!-- Using the Exact Reference Image as requested -->
+            <!-- ================= SECTION 1: HERO / HOOK (IMAGE 2 & 3 ARCHITECTURAL SHOWCASE) ================= -->
             <section class="sec1-hero-stage" id="heroHookPage1">
-                <img src="images/new b.avif"
-                    alt="गांठ का बढ़ता आकार और बदलती बनावट चिंता बढ़ा रही है? कभी सख़्तपन, कभी दर्द या सूजन—ये बदलाव रोज़मर्रा की ज़िंदगी को प्रभावित कर रहे हैं। मन में यह चिंता भी बनी रहती है कि कहीं आगे चलकर परेशानी और न बढ़ जाए।"
-                    class="sec1-exact-creative-img" loading="eager">
+
+                <!-- 1. Top Headline Card (Image 3 Style: Luxury Panel & Regal Typography) -->
+                <div class="hero-top-headline-card">
+                    <h1 class="hero-main-title">
+                        <span class="title-sub-prefix"><strong class="title-gath-bold">गांठ</strong> का बढ़ता आकार और</span>
+                        <span class="title-highlight">बदलती बनावट</span>
+                        <span class="title-question">चिंता बढ़ा रही है?</span>
+                    </h1>
+                </div>
+
+                <!-- 2. Middle Split Showcase (Image 2 Style: Problem Left · Cards Right) -->
+                <div class="hero-showcase-split">
+
+                    <!-- Left Column: Patient & Lump Problem (100% Clear & Clean Studio) -->
+                    <div class="hero-patient-showcase-col">
+                        <div class="patient-frame-wrap">
+                            <img src="../../.gemini/antigravity-ide/brain/f5b6d3f5-8292-4740-83e0-664d1838eb81/patient_lady_clean_1793260430629.jpg"
+                                onerror="this.src='images/new b.avif';"
+                                alt="गांठ की समस्या से परेशान महिला"
+                                class="patient-showcase-img" loading="eager">
+                        </div>
+                    </div>
+
+                    <!-- Right Column: 3 Symptom Cards (Large Thumbnails & Large Text) -->
+                    <div class="hero-cards-showcase-col">
+
+                        <!-- Card 01: कभी सख़्तपन -->
+                        <div class="image2-symptom-card">
+                            <div class="symptom-card-thumb">
+                                <img src="images/sec2-back-lump.avif" alt="कभी सख़्तपन" class="card-thumb-img" loading="eager">
+                            </div>
+                            <div class="symptom-card-label">कभी सख़्तपन</div>
+                        </div>
+
+                        <!-- Card 02: कभी दर्द -->
+                        <div class="image2-symptom-card">
+                            <div class="symptom-card-thumb">
+                                <img src="images/sec2-tender-pain.avif" alt="कभी दर्द" class="card-thumb-img" loading="eager">
+                            </div>
+                            <div class="symptom-card-label">कभी दर्द</div>
+                        </div>
+
+                        <!-- Card 03: कभी सूजन -->
+                        <div class="image2-symptom-card">
+                            <div class="symptom-card-thumb">
+                                <img src="images/sec2-swelling-pressure.avif" alt="कभी सूजन" class="card-thumb-img" loading="eager">
+                            </div>
+                            <div class="symptom-card-label">कभी सूजन</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 3. Bottom Summary Card (Clean Text · NO Box · NO Header Badge) -->
+                <div class="hero-bottom-summary-card">
+                    <p class="hero-summary-paragraph">
+                        ये बदलाव <strong class="summary-hl-primary">रोज़मर्रा की ज़िंदगी</strong> को प्रभावित कर रहे हैं। मन में यह चिंता भी बनी रहती है कि कहीं आगे चलकर <strong class="summary-hl-primary">परेशानी और न बढ़ जाए।</strong>
+                    </p>
+                </div>
+
             </section>
 
             <!-- ================= SECTION 2: समस्या को समझें ================= -->
@@ -2706,128 +3051,73 @@
                     जरूरी है:
                 </p> -->
 
-                <!-- 5 Problem Cards with Real Images & Tri-Color Theme -->
+                <!-- 5 Problem Cards with Alternating Zig-Zag Layout (All Royal Purple) -->
                 <div class="sec2-cards-deck">
 
-                    <!-- 1. गांठ के आकार या बनावट में बदलाव (Purple Theme) -->
-                    <article class="problem-card card-theme-purple">
-                        <div class="card-media-box">
-                            <img src="images/sec2-back-lump.avif" alt="गांठ के आकार या बनावट में बदलाव"
-                                class="card-real-img" loading="lazy">
-                            <div class="card-media-overlay"></div>
-                            <!-- <span class="card-float-badge"
-                                style="background: rgba(88, 28, 135, 0.88); color: #FFFFFF; border: 1px solid #D8B4FE;">
-                                <span>01</span> • आकार में वृद्धि
-                            </span> -->
-                        </div>
-                        <div class="card-body-content">
-                            <div class="card-top-row">
-                                <!-- <span class="card-tag-pill"> लक्षण1</span> -->
-                                <span class="card-header-icon"><i class="ti ti-arrows-maximize"></i></span>
+                    <!-- 1. गांठ के आकार या बनावट में बदलाव (Image Left, Text Right) -->
+                    <div class="symptom-row" data-step="1">
+                        <div class="symptom-media-frame">
+                            <div class="symptom-dashed-box">
+                                <img src="images/sec2-back-lump.avif" alt="गांठ के आकार या बनावट में बदलाव"
+                                    class="symptom-img" loading="lazy">
                             </div>
-                            <h3 class="card-problem-title">गांठ के आकार या बनावट में बदलाव</h3>
-                            <!-- <p class="card-problem-desc">
-                                धीरे-धीरे गांठ का आकार बढ़ना, सतह का उभार स्पष्ट होना या छूने पर भीतर सख़्तपन और कड़ापन
-                                महसूस होना।
-                            </p> -->
                         </div>
-                    </article>
+                        <div class="symptom-text-card">
+                            <h3 class="symptom-title">गांठ के आकार या बनावट में बदलाव</h3>
+                        </div>
+                    </div>
 
-                    <!-- 2. छूने पर दर्द या संवेदनशीलता (Yellow Theme) -->
-                    <article class="problem-card card-theme-yellow">
-                        <div class="card-media-box">
-                            <img src="images/sec2-tender-pain.avif" alt="छूने पर दर्द या संवेदनशीलता"
-                                class="card-real-img" loading="lazy">
-                            <div class="card-media-overlay"></div>
-                            <!-- <span class="card-float-badge"
-                                style="background: rgba(180, 83, 9, 0.9); color: #FFFFFF; border: 1px solid #FDE68A;">
-                                <span>02</span> • दर्द व संवेदनशीलता
-                            </span> -->
-                        </div>
-                        <div class="card-body-content">
-                            <div class="card-top-row">
-                                <!-- <span class="card-tag-pill">लक्षण 2</span> -->
-                                <span class="card-header-icon"><i class="ti ti-hand-finger"></i></span>
+                    <!-- 2. छूने पर दर्द या संवेदनशीलता (Text Left, Image Right) -->
+                    <div class="symptom-row row-reverse" data-step="2">
+                        <div class="symptom-media-frame">
+                            <div class="symptom-dashed-box">
+                                <img src="images/sec2-tender-pain.avif" alt="छूने पर दर्द या संवेदनशीलता"
+                                    class="symptom-img" loading="lazy">
                             </div>
-                            <h3 class="card-problem-title">छूने पर दर्द या संवेदनशीलता</h3>
-                            <!-- <p class="card-problem-desc">
-                                हल्का हाथ लगाने, उंगली से छूने या कपड़ों के घर्षण से तेज टीस, जलन या असहज दर्द महसूस
-                                होना।
-                            </p> -->
                         </div>
-                    </article>
+                        <div class="symptom-text-card">
+                            <h3 class="symptom-title">छूने पर दर्द या संवेदनशीलता</h3>
+                        </div>
+                    </div>
 
-                    <!-- 3. सूजन, दबाव या भारीपन (Green Theme) -->
-                    <article class="problem-card card-theme-green">
-                        <div class="card-media-box">
-                            <img src="images/sec2-swelling-pressure.avif" alt="सूजन, दबाव या भारीपन"
-                                class="card-real-img" loading="lazy">
-                            <div class="card-media-overlay"></div>
-                            <!-- <span class="card-float-badge"
-                                style="background: rgba(21, 128, 61, 0.9); color: #FFFFFF; border: 1px solid #86EFAC;">
-                                <span>03</span> • सूजन व भारीपन
-                            </span> -->
-                        </div>
-                        <div class="card-body-content">
-                            <div class="card-top-row">
-                                <!-- <span class="card-tag-pill">लक्षण 3</span> -->
-                                <span class="card-header-icon"><i class="ti ti-ripple"></i></span>
+                    <!-- 3. सूजन, दबाव या भारीपन (Image Left, Text Right) -->
+                    <div class="symptom-row" data-step="3">
+                        <div class="symptom-media-frame">
+                            <div class="symptom-dashed-box">
+                                <img src="images/sec2-swelling-pressure.avif" alt="सूजन, दबाव या भारीपन"
+                                    class="symptom-img" loading="lazy">
                             </div>
-                            <h3 class="card-problem-title">सूजन, दबाव या भारीपन</h3>
-                            <!-- <p class="card-problem-desc">
-                                गांठ के आसपास के हिस्से में खिंचाव, नसों में दबाव, मांसपेशियों में कड़ापन या लगातार
-                                भारीपन का अहसास होना।
-                            </p> -->
                         </div>
-                    </article>
+                        <div class="symptom-text-card">
+                            <h3 class="symptom-title">सूजन, दबाव या भारीपन</h3>
+                        </div>
+                    </div>
 
-                    <!-- 4. चलने-फिरने में असहजता (Purple & Green Blend Theme) -->
-                    <article class="problem-card card-theme-purple">
-                        <div class="card-media-box">
-                            <img src="images/sec2-arm-lump.avif" alt="चलने-फिरने में असहजता" class="card-real-img"
-                                loading="lazy">
-                            <div class="card-media-overlay"></div>
-                            <!-- <span class="card-float-badge"
-                                style="background: rgba(88, 28, 135, 0.88); color: #FFFFFF; border: 1px solid #C084FC;">
-                                <span>04</span> • दैनिक असहजता
-                            </span> -->
-                        </div>
-                        <div class="card-body-content">
-                            <div class="card-top-row">
-                                <!-- <span class="card-tag-pill">लक्षण 4</span> -->
-                                <span class="card-header-icon"><i class="ti ti-walk"></i></span>
+                    <!-- 4. चलने-फिरने में असहजता (Text Left, Image Right) -->
+                    <div class="symptom-row row-reverse" data-step="4">
+                        <div class="symptom-media-frame">
+                            <div class="symptom-dashed-box">
+                                <img src="images/sec2-arm-lump.avif" alt="चलने-फिरने में असहजता" class="symptom-img"
+                                    loading="lazy">
                             </div>
-                            <h3 class="card-problem-title">चलने-फिरने में असहजता</h3>
-                            <!-- <p class="card-problem-desc">
-                                हाथ, पैर या जोड़ों के पास गांठ होने से उठने-बैठने, मुड़ने, वजन उठाने या रोज़मर्रा के
-                                कामों में असहज रुकावट आना।
-                            </p> -->
                         </div>
-                    </article>
+                        <div class="symptom-text-card">
+                            <h3 class="symptom-title">चलने-फिरने में असहजता</h3>
+                        </div>
+                    </div>
 
-                    <!-- 5. Appearance को लेकर चिंता (Yellow & Purple Accent Theme) -->
-                    <article class="problem-card card-theme-yellow">
-                        <div class="card-media-box">
-                            <img src="images/sec2-face-appearance.avif" alt="Appearance को लेकर चिंता"
-                                class="card-real-img" loading="lazy">
-                            <div class="card-media-overlay"></div>
-                            <!-- <span class="card-float-badge"
-                                style="background: rgba(180, 83, 9, 0.9); color: #FFFFFF; border: 1px solid #FCD34D;">
-                                <span>05</span> • शारीरिक दिखावट
-                            </span> -->
-                        </div>
-                        <div class="card-body-content">
-                            <div class="card-top-row">
-                                <!-- <span class="card-tag-pill">लक्षण 5</span> -->
-                                <span class="card-header-icon"><i class="ti ti-mood-neutral"></i></span>
+                    <!-- 5. Appearance को लेकर चिंता (Image Left, Text Right) -->
+                    <div class="symptom-row" data-step="5">
+                        <div class="symptom-media-frame">
+                            <div class="symptom-dashed-box">
+                                <img src="images/sec2-face-appearance.avif" alt="Appearance को लेकर चिंता"
+                                    class="symptom-img" loading="lazy">
                             </div>
-                            <h3 class="card-problem-title">Appearance को लेकर चिंता</h3>
-                            <!-- <p class="card-problem-desc">
-                                चेहरे, गर्दन या खुले अंगों पर गांठ साफ दिखने से दूसरों के सामने झिझक, सामाजिक संकोच और
-                                आत्म-विश्वास में कमी।
-                            </p> -->
                         </div>
-                    </article>
+                        <div class="symptom-text-card">
+                            <h3 class="symptom-title">Appearance को लेकर चिंता</h3>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -3033,7 +3323,7 @@
 
             </section>
 
-            <!-- ================= SECTION 5: INGREDIENTS (चुनिंदा Ayurvedic Herbs) ================= -->
+            <!-- ================= SECTION 5: INGREDIENTS (IMAGE 2 DYNAMIC SLANTED SHOWCASE LAYOUT) ================= -->
             <section class="ayur-sec5-container" id="ingredientsSec">
                 <div class="sec3-ingredients-block">
                     <!-- Ingredients Badge -->
@@ -3046,62 +3336,56 @@
                     <h3 class="ingredients-heading">
                         चुनिंदा Ayurvedic Herbs
                     </h3>
-                    <!-- <p class="ingredients-sub-tagline">
-                        Kalmegh · Chirchita · Pashanbhed · Makoi Leaf
-                    </p> -->
 
-                    <!-- 2x2 Herb Cards Grid -->
-                    <div class="ingredients-grid">
-
-                        <!-- Herb 1: Kalmegh -->
-                        <div class="herb-card">
-                            <div class="herb-img-frame">
-                                <img src="images/Kalmegh.avif" alt="Kalmegh - कालमेघ" class="herb-img" loading="lazy">
-                                <!-- <span class="herb-tag-badge">Herb 01</span> -->
+                    <!-- Image 2 Style Slanted Showcase Layout -->
+                    <div class="herbs-slant-showcase">
+                        <!-- Left Column: 4 Interlocking Slanted Photo Frames with White Border -->
+                        <div class="herbs-slant-photos-col">
+                            <!-- Photo 1: Kalmegh -->
+                            <div class="herb-slant-frame slant-1">
+                                <img src="images/Kalmegh.avif" alt="Kalmegh" class="herb-slant-img" loading="lazy">
                             </div>
-                            <div class="herb-info">
-                                <h4 class="herb-name">Kalmegh</h4>
-                                <!-- <span class="herb-hindi-name">कालमेघ</span> -->
+                            <!-- Photo 2: Chirchita -->
+                            <div class="herb-slant-frame slant-2">
+                                <img src="images/ing2.avif" alt="Chirchita" class="herb-slant-img" loading="lazy">
+                            </div>
+                            <!-- Photo 3: Pashanbhed -->
+                            <div class="herb-slant-frame slant-3">
+                                <img src="images/ing1.avif" alt="Pashanbhed" class="herb-slant-img" loading="lazy">
+                            </div>
+                            <!-- Photo 4: Makoi Leaf -->
+                            <div class="herb-slant-frame slant-4">
+                                <img src="images/ing_1793101846173.avif" alt="Makoi Leaf" class="herb-slant-img" loading="lazy">
                             </div>
                         </div>
 
-                        <!-- Herb 2: Chirchita -->
-                        <div class="herb-card">
-                            <div class="herb-img-frame">
-                                <img src="images/ing2.avif" alt="Chirchita - चिरचिटा" class="herb-img" loading="lazy">
-                                <!-- <span class="herb-tag-badge">Herb 02</span> -->
+                        <!-- Right Column: Details & Checkmarks matching Image 2 -->
+                        <div class="herbs-slant-details-col">
+                            <div class="herb-detail-row">
+                                <div class="herb-detail-icon"><i class="ti ti-circle-check-filled"></i></div>
+                                <div class="herb-detail-content">
+                                    <h4 class="herb-detail-title">Kalmegh</h4>
+                                </div>
                             </div>
-                            <div class="herb-info">
-                                <h4 class="herb-name">Chirchita</h4>
-                                <!-- <span class="herb-hindi-name">चिरचिटा</span> -->
+                            <div class="herb-detail-row">
+                                <div class="herb-detail-icon"><i class="ti ti-circle-check-filled"></i></div>
+                                <div class="herb-detail-content">
+                                    <h4 class="herb-detail-title">Chirchita</h4>
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- Herb 3: Pashanbhed -->
-                        <div class="herb-card">
-                            <div class="herb-img-frame">
-                                <img src="images/ing1.avif" alt="Pashanbhed - पाषाणभेद" class="herb-img" loading="lazy">
-                                <!-- <span class="herb-tag-badge">Herb 03</span> -->
+                            <div class="herb-detail-row">
+                                <div class="herb-detail-icon"><i class="ti ti-circle-check-filled"></i></div>
+                                <div class="herb-detail-content">
+                                    <h4 class="herb-detail-title">Pashanbhed</h4>
+                                </div>
                             </div>
-                            <div class="herb-info">
-                                <h4 class="herb-name">Pashanbhed</h4>
-                                <!-- <span class="herb-hindi-name">पाषाणभेद</span> -->
-                            </div>
-                        </div>
-
-                        <!-- Herb 4: Makoi Leaf -->
-                        <div class="herb-card">
-                            <div class="herb-img-frame">
-                                <img src="images/ing_1793101846173.avif" alt="Makoi Leaf - मकोय" class="herb-img"
-                                    loading="lazy">
-                                <!-- <span class="herb-tag-badge">Herb 04</span> -->
-                            </div>
-                            <div class="herb-info">
-                                <h4 class="herb-name">Makoi Leaf</h4>
-                                <!-- <span class="herb-hindi-name">मकोय</span> -->
+                            <div class="herb-detail-row">
+                                <div class="herb-detail-icon"><i class="ti ti-circle-check-filled"></i></div>
+                                <div class="herb-detail-content">
+                                    <h4 class="herb-detail-title">Makoi Leaf</h4>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
